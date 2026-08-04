@@ -1,0 +1,144 @@
+/* ==========================================================================
+   Almanac — warm-beige reference direction for learn-claude.
+   Dark mode is a deliberate dusk taupe, not a near-black: it dims without
+   going stark. Tokens are defined once and every rule reads from them.
+   ========================================================================== */
+
+:root{
+  --bg:#F1E7D6; --bg-panel:#E8DAC0; --ink:#2B2117; --ink-soft:#6B5A45; --rule:#D2C0A0;
+  --accent:#8A5A2B; --signal:#3F5D3A; --code-bg:#E9DEC7;
+  --font-head: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#4A4136; --bg-panel:#56493B; --ink:#F3EAD9; --ink-soft:#C9BBA3; --rule:#6B5D4B;
+    --accent:#D79A5C; --signal:#7FB37A; --code-bg:#55483A;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#4A4136; --bg-panel:#56493B; --ink:#F3EAD9; --ink-soft:#C9BBA3; --rule:#6B5D4B;
+  --accent:#D79A5C; --signal:#7FB37A; --code-bg:#55483A;
+}
+:root[data-theme="light"]{
+  --bg:#F1E7D6; --bg-panel:#E8DAC0; --ink:#2B2117; --ink-soft:#6B5A45; --rule:#D2C0A0;
+  --accent:#8A5A2B; --signal:#3F5D3A; --code-bg:#E9DEC7;
+}
+
+*{ box-sizing:border-box; }
+html{ background:var(--bg); }
+body{
+  margin:0; background:var(--bg); color:var(--ink); font-family:var(--font-body);
+  line-height:1.65; font-size:17px; -webkit-font-smoothing:antialiased;
+}
+::selection{ background:var(--accent); color:var(--bg); }
+a{ color:var(--accent); }
+a:hover{ text-decoration-thickness:2px; }
+:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+
+.shell{
+  display:grid; grid-template-columns:250px 1fr; gap:0; max-width:1040px; margin:0 auto;
+  min-height:100vh; align-items:start;
+}
+
+/* ---------------------------- sidebar ---------------------------- */
+.sidebar{
+  position:sticky; top:0; align-self:start; height:100vh; overflow-y:auto;
+  border-right:1px solid var(--rule); padding:1.6rem 1.3rem 3rem; font-size:.86rem;
+}
+.sidebar .brand{
+  display:block; font-family:var(--font-head); font-weight:800; letter-spacing:-.01em;
+  font-size:1.1rem; color:var(--ink); text-decoration:none; margin-bottom:1.6rem;
+  border-bottom:2px solid var(--accent); padding-bottom:.6rem;
+}
+.stage{ margin-bottom:1.3rem; }
+.stage-name{
+  font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-soft);
+  font-weight:700; margin-bottom:.4rem;
+}
+.sidebar ul{ list-style:none; margin:0; padding:0; }
+.sidebar li a{
+  display:block; padding:.3rem 0 .3rem .65rem; margin-left:-.65rem; color:var(--ink-soft);
+  text-decoration:none; border-left:2px solid transparent; line-height:1.4;
+}
+.sidebar li a:hover{ color:var(--ink); }
+.sidebar li a.current{ color:var(--ink); border-left-color:var(--accent); font-weight:600; background:var(--bg-panel); }
+
+/* ---------------------------- content ---------------------------- */
+.content{ padding:3rem 3rem 6rem; max-width:720px; }
+.eyebrow{
+  font-family:var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.06em;
+  color:var(--ink-soft); margin-bottom:1rem;
+}
+
+.content h1{ font-family:var(--font-head); font-weight:800; font-size:1.9rem; letter-spacing:-.01em;
+  border-bottom:2px solid var(--accent); padding-bottom:.6rem; margin:0 0 1.3rem; text-wrap:balance; }
+.content h2{ font-family:var(--font-head); font-weight:700; font-size:1.3rem; margin:2.2rem 0 .9rem; }
+.content h3{ font-family:var(--font-head); font-weight:700; font-size:1.05rem; margin:1.7rem 0 .7rem; }
+
+.content p{ margin:0 0 1.05rem; }
+.content strong{ font-weight:700; }
+.content ul, .content ol{ margin:0 0 1.1rem; padding-left:1.4rem; }
+.content li{ margin-bottom:.35rem; }
+.content li > ul, .content li > ol{ margin-top:.35rem; }
+
+.content blockquote{
+  margin:1.4rem 0; padding:.9rem 1.2rem; border-left:3px solid var(--accent);
+  background:var(--bg-panel); color:var(--ink);
+}
+.content blockquote p:last-child{ margin-bottom:0; }
+
+.content table{
+  border-collapse:collapse; width:100%; margin:1.2rem 0; font-size:.88rem;
+  font-variant-numeric:tabular-nums;
+}
+.content th, .content td{ border:1px solid var(--rule); padding:.55rem .75rem; text-align:left; vertical-align:top; }
+.content th{ border-bottom:2px solid var(--ink-soft); text-transform:uppercase; font-size:.72rem; letter-spacing:.04em; color:var(--ink-soft); }
+.content tr:nth-child(even) td{ background:var(--bg-panel); }
+
+.content code{
+  font-family:var(--font-mono); background:var(--code-bg); padding:.15em .35em;
+  border-radius:2px; font-size:.86em;
+}
+.content pre{
+  background:var(--code-bg); border:1px solid var(--rule); padding:1rem 1.1rem;
+  overflow-x:auto; margin:1.2rem 0; line-height:1.55;
+}
+.content pre code{ background:none; padding:0; font-size:.85em; border-radius:0; }
+
+.content hr{ border:none; border-top:1px solid var(--rule); margin:2.2rem 0; }
+.content img{ max-width:100%; height:auto; }
+
+/* callout-style paragraphs: any blockquote that starts a "Try it" / exercise
+   block reads clearly enough with the accent border above; no extra markup
+   needed since the source files use plain Markdown throughout. */
+
+.page-footer{
+  display:flex; justify-content:space-between; align-items:center; gap:1rem;
+  margin-top:3rem; padding-top:1.3rem; border-top:1px solid var(--rule);
+  font-size:.82rem; color:var(--ink-soft);
+}
+.edit-link{ color:var(--ink-soft); }
+.theme-toggle{
+  font:inherit; font-size:1rem; line-height:1; background:var(--bg-panel);
+  border:1px solid var(--rule); color:var(--ink); width:2.1rem; height:2.1rem;
+  cursor:pointer;
+}
+.theme-toggle:hover{ border-color:var(--accent); }
+
+/* ---------------------------- syntax highlighting (rouge) ---------------------------- */
+.highlight .c, .highlight .c1, .highlight .cm{ color:var(--ink-soft); font-style:italic; }
+.highlight .k, .highlight .kd, .highlight .kn{ color:var(--accent); font-weight:600; }
+.highlight .s, .highlight .s1, .highlight .s2{ color:var(--signal); }
+.highlight .nt{ color:var(--accent); }
+.highlight .na{ color:var(--ink-soft); }
+.highlight .mi, .highlight .m{ color:var(--signal); }
+.highlight .err{ background:none; }
+
+/* ---------------------------- responsive ---------------------------- */
+@media (max-width:800px){
+  .shell{ grid-template-columns:1fr; }
+  .sidebar{ position:static; height:auto; border-right:none; border-bottom:1px solid var(--rule); padding:1.2rem 1.3rem; }
+  .content{ padding:2rem 1.3rem 4rem; }
+}

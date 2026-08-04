@@ -1,0 +1,49 @@
+title: "Claude: Zero to Hero"
+description: "A complete, step-by-step learning track for Claude — from a first prompt to shipped production agents."
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    disable: false
+
+plugins:
+  - jekyll-readme-index
+
+readme_index:
+  with_frontmatter: true
+  remove_originals: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Stage order + display names for the sidebar nav. Kept here, not derived
+# from folder names, so a stage can be renamed without touching any file.
+stages:
+  - slug: 00-start-here
+    name: "Start here"
+  - slug: 01-foundations
+    name: "Foundations"
+  - slug: 02-power-user
+    name: "Power user"
+  - slug: 03-claude-code
+    name: "Claude Code"
+  - slug: 04-api
+    name: "API"
+  - slug: 05-agents
+    name: "Agents"
+  - slug: 06-production
+    name: "Production"
+  - slug: 07-capstones
+    name: "Capstones"
+  - slug: 99-reference
+    name: "Reference"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor

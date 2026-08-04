@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | default: site.description }}">
+<link rel="stylesheet" href="{{ '/assets/css/almanac.css' | relative_url }}">
+</head>
+<body>
+
+{% assign current_stage = "" %}
+{% assign current_index = 0 %}
+{% assign current_count = 0 %}
+
+<div class="shell">
+  <nav class="sidebar" aria-label="Modules">
+    <a class="brand" href="{{ '/' | relative_url }}">Learn Claude</a>
+    {% for stage in site.stages %}
+      {% assign stage_pages = site.pages | where_exp: "p", "p.url contains stage.slug" | sort: "url" %}
+      {% if stage_pages.size > 0 %}
+      <div class="stage">
+        <div class="stage-name">{{ stage.slug | slice: 0, 2 }} · {{ stage.name }}</div>
+        <ul>
+          {% for item in stage_pages %}
+            {% assign is_current = false %}
+            {% if item.url == page.url %}{% assign is_current = true %}{% endif %}
+            {% if is_current %}
+              {% assign current_stage = stage.name %}
+              {% assign current_index = forloop.index %}
+              {% assign current_count = stage_pages.size %}
+            {% endif %}
+            <li><a href="{{ item.url | relative_url }}"{% if is_current %} class="current" aria-current="page"{% endif %}>{{ item.title | default: item.name }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    {% endfor %}
+  </nav>
+
+  <main class="content">
+    {% if current_stage != "" %}
+    <div class="eyebrow">{{ current_stage }} · module {{ current_index }} of {{ current_count }}</div>
+    {% endif %}
+    {{ content }}
+    <footer class="page-footer">
+      {% if site.github_repo %}<a href="https://github.com/{{ site.github_repo }}" class="edit-link">View source on GitHub</a>{% endif %}
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
+    </footer>
+  </main>
+</div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var btn = document.getElementById('theme-toggle');
+  var stored = localStorage.getItem('almanac-theme');
+  if (stored) root.setAttribute('data-theme', stored);
+  function sync() {
+    var isDark = (root.getAttribute('data-theme') === 'dark') ||
+      (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    btn.textContent = isDark ? '☀' : '☾';
+  }
+  btn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('almanac-theme', next);
+    sync();
+  });
+  sync();
+})();
+</script>
+</body>
+</html>
