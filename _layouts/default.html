@@ -26,7 +26,7 @@
 
 <nav class="sidebar" id="sidebar" aria-label="Modules">
   {% for stage in site.stages %}
-    {% assign stage_pages = site.pages | where_exp: "p", "p.url contains stage.slug" | sort: "url" %}
+    {% assign stage_pages = site.pages | where_exp: "p", "p.url contains stage.slug" | sort: "order" %}
     {% if stage_pages.size > 0 %}
     {% assign is_current_stage = false %}
     {% if page.url contains stage.slug %}{% assign is_current_stage = true %}{% endif %}

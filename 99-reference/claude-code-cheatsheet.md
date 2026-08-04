@@ -1,5 +1,6 @@
 ---
 title: "Claude Code cheat sheet"
+order: 4
 ---
 
 # Claude Code cheat sheet

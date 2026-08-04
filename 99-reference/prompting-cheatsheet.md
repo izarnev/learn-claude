@@ -1,5 +1,6 @@
 ---
 title: "Prompting cheat sheet"
+order: 3
 ---
 
 # Prompting cheat sheet
