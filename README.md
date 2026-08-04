@@ -12,13 +12,17 @@ A complete, step-by-step learning track for Claude — from "I've never typed a 
 
 ## How this track is organised
 
-Eight numbered folders. Each folder is a **stage**. Each file inside is a **module** with the same shape:
+Eight stages, numbered `00` to `07`, plus a `99-reference` folder you dip into rather than work through. Each file inside a stage is a **module**, and every module has the same shape:
 
-1. **What you'll learn** — the outcome, in one line
-2. **Concepts** — the actual guide
-3. **Try it** — hands-on exercises you can do immediately
-4. **Checkpoint** — how you know you've got it
-5. **Going deeper** — links to the official docs for the details this guide compresses
+1. **You are here** — which path it's on, what plan it needs, how long it takes, what it assumes
+2. **What you'll learn** — the outcome, in one line
+3. **If you only read one thing** — the whole module in plain language, no jargon. Enough to be useful on its own.
+4. **The rest of the module** — the actual guide, in depth
+5. **Try it** — hands-on exercises you can do immediately, several with worked answers
+6. **Checkpoint** — how you know you've got it
+7. **Going deeper** — links to the official docs for the details this guide compresses
+
+If you're new and something in **The details** loses you, the honest advice is to read the summary box, do the exercises, and come back. The box is not a teaser — it's the load-bearing part.
 
 Modules are numbered in the order you should do them. Nothing later assumes anything you haven't already read.
 
@@ -41,23 +45,25 @@ learn-claude/
 
 You do not have to do all of it. Pick the path that matches where you're going.
 
-### Path A — "I just want to use Claude really well" (~6 hours)
+Time estimates below assume you actually do the exercises. Reading only, halve them. They are per-module ranges added up, not a promise — go at whatever pace makes it stick.
+
+### Path A — "I just want to use Claude really well" (12–16 hours)
 
 `00-start-here` → `01-foundations` → `02-power-user` → capstone 1 & 2
 
-You'll never touch code. You'll end up better at Claude than most engineers.
+You'll never touch code. You'll end up better at Claude than most engineers. Spread across two or three weeks is more effective than one weekend.
 
-### Path B — "I want to code with Claude" (~15 hours)
+### Path B — "I want to code with Claude" (+12–18 hours on top of Path A)
 
 Path A → `03-claude-code` → capstone 3
 
-### Path C — "I want to build products on Claude" (~30 hours)
+### Path C — "I want to build products on Claude" (40–60 hours)
 
 Path A (skim) → `03-claude-code` → `04-api` → `05-agents` → `06-production` → capstones 4 & 5
 
 ### Path D — "I'm technical, skip the basics"
 
-`00-start-here/the-claude-landscape.md` → `01-foundations/prompting-fundamentals.md` → `01-foundations/models-and-modes.md` → then jump to `03-claude-code` or `04-api`.
+`00-start-here/02-the-claude-landscape.md` → `01-foundations/02-prompting-fundamentals.md` → `01-foundations/03-models-and-modes.md` → then jump to `03-claude-code` or `04-api`.
 
 ---
 
@@ -67,89 +73,90 @@ Path A (skim) → `03-claude-code` → `04-api` → `05-agents` → `06-producti
 
 | # | Module | Why |
 |---|--------|-----|
-| 00 | [How to use this track](00-start-here/how-to-use-this-track.md) | Ground rules, how to practise |
-| 01 | [What Claude actually is](00-start-here/what-claude-is.md) | Mental model: LLM, context, tokens |
-| 02 | [The Claude landscape](00-start-here/the-claude-landscape.md) | Every surface, one map |
-| 03 | [Plans, pricing, and limits](00-start-here/plans-and-pricing.md) | What you need to buy, and when |
+| 00 | [How to use this track](00-start-here/00-how-to-use-this-track.md) | Ground rules, how to practise |
+| 01 | [What Claude actually is](00-start-here/01-what-claude-is.md) | Mental model: LLM, context, tokens |
+| 02 | [The Claude landscape](00-start-here/02-the-claude-landscape.md) | Every surface, one map |
+| 03 | [Plans, pricing, and limits](00-start-here/03-plans-and-pricing.md) | What you need to buy, and when |
 
 ### 01 · Foundations — chat mastery
 
 | # | Module |
 |---|--------|
-| 01 | [Your first real conversation](01-foundations/your-first-conversation.md) |
-| 02 | [Prompting fundamentals](01-foundations/prompting-fundamentals.md) |
-| 03 | [Models, effort, and thinking](01-foundations/models-and-modes.md) |
-| 04 | [Files, images, and vision](01-foundations/files-and-vision.md) |
-| 05 | [Artifacts and file creation](01-foundations/artifacts-and-file-creation.md) |
-| 06 | [Web search and Research](01-foundations/search-and-research.md) |
-| 07 | [Memory and personalisation](01-foundations/memory-and-personalisation.md) |
-| 08 | [Structured prompting with XML](01-foundations/structured-prompting.md) |
+| 01 | [Your first real conversation](01-foundations/01-your-first-conversation.md) |
+| 02 | [Prompting fundamentals](01-foundations/02-prompting-fundamentals.md) |
+| 03 | [Models, effort, and thinking](01-foundations/03-models-and-modes.md) |
+| 04 | [Files, images, and vision](01-foundations/04-files-and-vision.md) |
+| 05 | [Artifacts and file creation](01-foundations/05-artifacts-and-file-creation.md) |
+| 06 | [Web search and Research](01-foundations/06-search-and-research.md) |
+| 07 | [Memory and personalisation](01-foundations/07-memory-and-personalisation.md) |
+| 08 | [Structured prompting with XML](01-foundations/08-structured-prompting.md) |
 
 ### 02 · Power user — no code required
 
 | # | Module |
 |---|--------|
-| 01 | [Projects](02-power-user/projects.md) |
-| 02 | [Skills](02-power-user/skills.md) |
-| 03 | [Connectors and MCP, explained without code](02-power-user/connectors-and-mcp.md) |
-| 04 | [Cowork](02-power-user/cowork.md) |
-| 05 | [Claude inside your apps](02-power-user/claude-in-your-apps.md) |
-| 06 | [Automation: scheduled tasks and routines](02-power-user/automation.md) |
-| 07 | [Plugins](02-power-user/plugins.md) |
-| 08 | [Advanced prompting patterns](02-power-user/advanced-prompting.md) |
+| 01 | [Projects](02-power-user/01-projects.md) |
+| 02 | [Skills](02-power-user/02-skills.md) |
+| 03 | [Connectors and MCP, explained without code](02-power-user/03-connectors-and-mcp.md) |
+| 04 | [Cowork](02-power-user/04-cowork.md) |
+| 05 | [Claude inside your apps](02-power-user/05-claude-in-your-apps.md) |
+| 06 | [Automation: scheduled tasks and routines](02-power-user/06-automation.md) |
+| 07 | [Plugins](02-power-user/07-plugins.md) |
+| 08 | [Advanced prompting patterns](02-power-user/08-advanced-prompting.md) |
 
 ### 03 · Claude Code — agentic coding
 
 | # | Module |
 |---|--------|
-| 01 | [Install and first session](03-claude-code/install-and-first-session.md) |
-| 02 | [How Claude Code works](03-claude-code/how-it-works.md) |
-| 03 | [Everyday workflows](03-claude-code/everyday-workflows.md) |
-| 04 | [Permissions, sandboxing, and safety](03-claude-code/permissions-and-safety.md) |
-| 05 | [CLAUDE.md, rules, and memory](03-claude-code/claude-md-and-memory.md) |
-| 06 | [Skills and slash commands](03-claude-code/skills-and-commands.md) |
-| 07 | [Subagents, teams, and parallelism](03-claude-code/subagents-and-parallelism.md) |
-| 08 | [Hooks](03-claude-code/hooks.md) |
-| 09 | [MCP in Claude Code](03-claude-code/mcp.md) |
-| 10 | [Plugins and marketplaces](03-claude-code/plugins-and-marketplaces.md) |
-| 11 | [Context and cost management](03-claude-code/context-and-cost.md) |
-| 12 | [Headless, CI, and automation](03-claude-code/headless-and-ci.md) |
-| 13 | [Surfaces: desktop, web, IDE, Slack](03-claude-code/surfaces.md) |
+| 01 | [Install and first session](03-claude-code/01-install-and-first-session.md) |
+| 02 | [How Claude Code works](03-claude-code/02-how-it-works.md) |
+| 03 | [Everyday workflows](03-claude-code/03-everyday-workflows.md) |
+| 04 | [Permissions, sandboxing, and safety](03-claude-code/04-permissions-and-safety.md) |
+| 05 | [CLAUDE.md, rules, and memory](03-claude-code/05-claude-md-and-memory.md) |
+| 06 | [Skills and slash commands](03-claude-code/06-skills-and-commands.md) |
+| 07 | [Subagents, teams, and parallelism](03-claude-code/07-subagents-and-parallelism.md) |
+| 08 | [Hooks](03-claude-code/08-hooks.md) |
+| 09 | [MCP in Claude Code](03-claude-code/09-mcp.md) |
+| 10 | [Plugins and marketplaces](03-claude-code/10-plugins-and-marketplaces.md) |
+| 11 | [Context and cost management](03-claude-code/11-context-and-cost.md) |
+| 12 | [Headless, CI, and automation](03-claude-code/12-headless-and-ci.md) |
+| 13 | [Surfaces: desktop, web, IDE, Slack](03-claude-code/13-surfaces.md) |
 
 ### 04 · API — building on Claude
 
 | # | Module |
 |---|--------|
-| 01 | [Setup and your first API call](04-api/setup-and-first-call.md) |
-| 02 | [The Messages API in depth](04-api/messages-api.md) |
-| 03 | [Thinking and effort](04-api/thinking-and-effort.md) |
-| 04 | [Tool use](04-api/tool-use.md) |
-| 05 | [Server tools and MCP connector](04-api/server-tools-and-mcp.md) |
-| 06 | [Structured outputs](04-api/structured-outputs.md) |
-| 07 | [Prompt caching](04-api/prompt-caching.md) |
-| 08 | [Vision, PDFs, and the Files API](04-api/vision-pdfs-files.md) |
-| 09 | [Streaming and batch processing](04-api/streaming-and-batch.md) |
-| 10 | [Skills in the API](04-api/skills-in-the-api.md) |
+| 00 | [API pricing and rate limits](04-api/00-pricing-and-rate-limits.md) |
+| 01 | [Setup and your first API call](04-api/01-setup-and-first-call.md) |
+| 02 | [The Messages API in depth](04-api/02-messages-api.md) |
+| 03 | [Thinking and effort](04-api/03-thinking-and-effort.md) |
+| 04 | [Tool use](04-api/04-tool-use.md) |
+| 05 | [Server tools and MCP connector](04-api/05-server-tools-and-mcp.md) |
+| 06 | [Structured outputs](04-api/06-structured-outputs.md) |
+| 07 | [Prompt caching](04-api/07-prompt-caching.md) |
+| 08 | [Vision, PDFs, and the Files API](04-api/08-vision-pdfs-files.md) |
+| 09 | [Streaming and batch processing](04-api/09-streaming-and-batch.md) |
+| 10 | [Skills in the API](04-api/10-skills-in-the-api.md) |
 
 ### 05 · Agents
 
 | # | Module |
 |---|--------|
-| 01 | [Agent design principles](05-agents/agent-design-principles.md) |
-| 02 | [The Claude Agent SDK](05-agents/agent-sdk.md) |
-| 03 | [Context engineering](05-agents/context-engineering.md) |
-| 04 | [Multi-agent patterns](05-agents/multi-agent-patterns.md) |
-| 05 | [Managed Agents](05-agents/managed-agents.md) |
+| 01 | [Agent design principles](05-agents/01-agent-design-principles.md) |
+| 02 | [The Claude Agent SDK](05-agents/02-agent-sdk.md) |
+| 03 | [Context engineering](05-agents/03-context-engineering.md) |
+| 04 | [Multi-agent patterns](05-agents/04-multi-agent-patterns.md) |
+| 05 | [Managed Agents](05-agents/05-managed-agents.md) |
 
 ### 06 · Production
 
 | # | Module |
 |---|--------|
-| 01 | [Evals and testing](06-production/evals-and-testing.md) |
-| 02 | [Guardrails and safety](06-production/guardrails.md) |
-| 03 | [Cost and latency optimisation](06-production/cost-and-latency.md) |
-| 04 | [Observability](06-production/observability.md) |
-| 05 | [Enterprise and governance](06-production/enterprise-and-governance.md) |
+| 01 | [Evals and testing](06-production/01-evals-and-testing.md) |
+| 02 | [Guardrails and safety](06-production/02-guardrails.md) |
+| 03 | [Cost and latency optimisation](06-production/03-cost-and-latency.md) |
+| 04 | [Observability](06-production/04-observability.md) |
+| 05 | [Enterprise and governance](06-production/05-enterprise-and-governance.md) |
 
 ### 07 · Capstones
 
