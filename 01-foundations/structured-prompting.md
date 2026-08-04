@@ -95,7 +95,7 @@ Asking for XML output is the simplest reliable way to separate reasoning from re
 </output_format>
 ```
 
-Then you extract `<answer>` and discard the rest. This works in chat and is the basis for a lot of production prompting. (In the API there's a stronger mechanism — [structured outputs](../04-api/06-structured-outputs.md) — but XML tags work everywhere and require no special support.)
+Then you extract `<answer>` and discard the rest. This works in chat and is the basis for a lot of production prompting. (In the API there's a stronger mechanism — [structured outputs](../04-api/structured-outputs.md) — but XML tags work everywhere and require no special support.)
 
 ---
 
@@ -115,7 +115,7 @@ Write a {{LENGTH}}-word {{DOCUMENT_TYPE}} about {{TOPIC}}.
 </task>
 ```
 
-Now this is a reusable asset. Fill it in by hand in chat, or programmatically in code. Once you have three or four of these, you have a prompt library — and that's exactly the thing that becomes a **Skill** in [02-power-user/02](../02-power-user/02-skills.md).
+Now this is a reusable asset. Fill it in by hand in chat, or programmatically in code. Once you have three or four of these, you have a prompt library — and that's exactly the thing that becomes a **Skill** in [Skills](../02-power-user/skills.md).
 
 ---
 

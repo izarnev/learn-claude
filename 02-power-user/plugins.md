@@ -70,7 +70,7 @@ Correct Claude in chat
 
 Don't skip steps. A plugin built before you've used the underlying skills for real is a plugin full of guesses.
 
-Building plugins is covered in [03-claude-code/10](../03-claude-code/10-plugins-and-marketplaces.md).
+Building plugins is covered in [Plugins and marketplaces](../03-claude-code/plugins-and-marketplaces.md).
 
 ---
 

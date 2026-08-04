@@ -186,7 +186,7 @@ claude logs 7c5dcf5d         # check on one
 claude attach 7c5dcf5d       # take it over
 ```
 
-**Subagents and agent teams** — covered in [module 07](07-subagents-and-parallelism.md).
+**Subagents and agent teams** — covered in [Subagents, teams, and parallelism](subagents-and-parallelism.md).
 
 ---
 

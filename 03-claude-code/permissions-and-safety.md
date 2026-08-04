@@ -163,7 +163,7 @@ exit 0
 }
 ```
 
-Covered fully in [module 08](08-hooks.md).
+Covered fully in [Hooks](hooks.md).
 
 ---
 
@@ -173,7 +173,7 @@ Three things to actually worry about.
 
 ### 1. Destructive commands
 
-Mitigations: deny rules on `rm -rf`, `git push --force`, `git reset --hard`, `DROP TABLE`. A `PreToolUse` hook on `Bash` that pattern-matches. The confirmation-gate prompt from [module 03](03-everyday-workflows.md). And most fundamentally: **work in git, commit often.**
+Mitigations: deny rules on `rm -rf`, `git push --force`, `git reset --hard`, `DROP TABLE`. A `PreToolUse` hook on `Bash` that pattern-matches. The confirmation-gate prompt from [Everyday workflows](everyday-workflows.md). And most fundamentally: **work in git, commit often.**
 
 ### 2. Prompt injection
 

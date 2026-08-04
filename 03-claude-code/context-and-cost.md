@@ -67,7 +67,7 @@ Use `--fallback-model sonnet,haiku` so an overloaded primary doesn't stall you.
 
 ### 3. Use subagents for anything that reads a lot
 
-A subagent's forty file reads stay in *its* context. Only the summary comes back. See [module 07](07-subagents-and-parallelism.md).
+A subagent's forty file reads stay in *its* context. Only the summary comes back. See [Subagents, teams, and parallelism](subagents-and-parallelism.md).
 
 ### 4. Keep CLAUDE.md under 200 lines
 

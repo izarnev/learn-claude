@@ -95,7 +95,7 @@ Upload separately per surface.
 
 ## Writing a Skill for programmatic use
 
-The same authoring rules from [02-power-user/02](../02-power-user/02-skills.md), plus:
+The same authoring rules from [Skills](../02-power-user/skills.md), plus:
 
 **Be more explicit about output.** No human is there to say "actually, make it shorter." State the exact format, file name, and location.
 

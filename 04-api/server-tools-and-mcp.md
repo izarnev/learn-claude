@@ -81,7 +81,7 @@ Runs Python in a sandboxed container. This is the right answer for:
 - File format conversion
 - Anything deterministic
 
-It's also the container Agent Skills run in ([module 10](10-skills-in-the-api.md)).
+It's also the container Agent Skills run in ([Skills in the API](skills-in-the-api.md)).
 
 **Constraints on the API:** no network access, no runtime package installation, pre-installed packages only.
 

@@ -68,7 +68,7 @@ Always give the best answer.                 ← meaningless
 Be professional.                             ← too vague to act on
 ```
 
-Remember [module 02](02-prompting-fundamentals.md): tell it what to do, not what to avoid, and explain why when the reason helps it generalise.
+Remember [Prompting fundamentals](prompting-fundamentals.md): tell it what to do, not what to avoid, and explain why when the reason helps it generalise.
 
 ---
 

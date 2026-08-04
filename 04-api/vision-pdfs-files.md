@@ -122,7 +122,7 @@ response = client.beta.messages.create(
 
 ## Grounding: the pattern that prevents hallucination
 
-The same technique from [01-foundations/02](../01-foundations/02-prompting-fundamentals.md), now in code:
+The same technique from [Prompting fundamentals](../01-foundations/prompting-fundamentals.md), now in code:
 
 ```python
 prompt = """
@@ -150,7 +150,7 @@ For production RAG, use the [Citations](https://platform.claude.com/docs/en/buil
 Send the same screenshot at 4000px and 1500px. Compare `usage.input_tokens` and answer quality.
 
 **Exercise 2 — Chart extraction.**
-Extract data from a chart image into a structured output ([module 06](06-structured-outputs.md)). Verify against the axes yourself.
+Extract data from a chart image into a structured output ([Structured outputs](structured-outputs.md)). Verify against the axes yourself.
 
 **Exercise 3 — PDF, two ways.**
 Take a text-heavy PDF. Send it as a document, and separately as extracted text. Compare cost and answer quality. Decide your default.

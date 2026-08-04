@@ -66,7 +66,7 @@ Modern Claude models reason before answering. Two mechanisms exist:
 - **Adaptive thinking** (`thinking: {type: "adaptive"}`) — Claude decides on its own how much to think, calibrated by task complexity and an `effort` setting. This is the current approach, used by Claude 4.6 and later. On Fable 5 it's always on.
 - **Extended thinking** (`thinking: {type: "enabled", budget_tokens: N}`) — the older approach with a manual token budget. Deprecated; on Claude 4.7 and later, setting `budget_tokens` returns a 400 error.
 
-In the chat apps this surfaces as a thinking/effort toggle. In the API it's the `thinking` and `output_config.effort` parameters. Module [01-foundations/03](../01-foundations/03-models-and-modes.md) covers when to reach for it.
+In the chat apps this surfaces as a thinking/effort toggle. In the API it's the `thinking` and `output_config.effort` parameters. The [Models, effort, and thinking](../01-foundations/models-and-modes.md) module covers when to reach for it.
 
 ### Tools
 
@@ -121,7 +121,7 @@ Ask Claude, without web search enabled: *"What is the most recent Claude model, 
 Tell Claude your favourite colour. Start a brand-new conversation and ask it what your favourite colour is. Then turn on memory (Settings → Personalisation) and repeat. You've just seen the difference between "the model remembers" and "the product retrieves".
 
 **Exercise 3 — Feel token cost.**
-Paste a long article (3,000+ words) and ask a one-line question. Then start fresh, paste the same article, and ask ten questions in sequence. The second conversation costs roughly ten times as much, because the article is resent every turn. This is exactly why prompt caching exists (module [04-api/07](../04-api/07-prompt-caching.md)).
+Paste a long article (3,000+ words) and ask a one-line question. Then start fresh, paste the same article, and ask ten questions in sequence. The second conversation costs roughly ten times as much, because the article is resent every turn. This is exactly why prompt caching exists (see [Prompt caching](../04-api/prompt-caching.md)).
 
 **Exercise 4 — Break it on purpose.**
 Ask Claude to multiply two 6-digit numbers in its head, with thinking off. Check the answer. Then ask it to use code. This is the clearest demonstration of "give it a tool" you will ever get.

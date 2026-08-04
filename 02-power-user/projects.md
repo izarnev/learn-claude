@@ -109,7 +109,7 @@ Don't include: enormous logs, entire codebases (use Claude Code), anything you w
 
 ## Projects in Cowork
 
-Cowork has its own project concept: workspaces that group related tasks with their own files, links, instructions, and **memory**. Notably, memory in Cowork is currently supported *in projects only*. See [module 04](04-cowork.md).
+Cowork has its own project concept: workspaces that group related tasks with their own files, links, instructions, and **memory**. Notably, memory in Cowork is currently supported *in projects only*. See [Cowork](cowork.md).
 
 ---
 

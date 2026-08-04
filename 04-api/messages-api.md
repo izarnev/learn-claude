@@ -74,7 +74,7 @@ client.messages.create(
 )
 ```
 
-For caching (module [07](07-prompt-caching.md)), pass it as an array of blocks:
+For caching (see [Prompt caching](prompt-caching.md)), pass it as an array of blocks:
 
 ```python
 system=[
@@ -140,7 +140,7 @@ Note: append `response.content` (the block array), not `response.content[0].text
 
 Every turn resends everything. Three mitigations:
 
-1. **Prompt caching** — the biggest win for a stable prefix ([module 07](07-prompt-caching.md))
+1. **Prompt caching** — the biggest win for a stable prefix ([Prompt caching](prompt-caching.md))
 2. **Compaction** — the API offers built-in [compaction](https://platform.claude.com/docs/en/build-with-claude/compaction)
 3. **Context editing** — programmatically remove old content, e.g. stale tool results ([context editing](https://platform.claude.com/docs/en/build-with-claude/context-editing))
 

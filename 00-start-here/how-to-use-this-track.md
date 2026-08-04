@@ -33,7 +33,7 @@ Every file follows the same five sections. When you're skimming, you can jump st
 
 **For stages 04–06 (API):** a Claude Console account with prepaid credits at [platform.claude.com](https://platform.claude.com). Budget $5–20 to complete every exercise comfortably.
 
-See [03-plans-and-pricing.md](03-plans-and-pricing.md) for the details.
+See [plans-and-pricing.md](plans-and-pricing.md) for the details.
 
 ---
 

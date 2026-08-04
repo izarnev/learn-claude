@@ -57,7 +57,7 @@ Each connector's tools can be set to:
 
 A sane default: **read-only tools on "always allow", anything that writes, sends, or deletes on "needs approval".** Reading your calendar is low-risk. Sending an email as you is not.
 
-In Cowork these interact with session modes — see [module 04](04-cowork.md).
+In Cowork these interact with session modes — see [Cowork](cowork.md).
 
 ---
 

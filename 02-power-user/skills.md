@@ -195,7 +195,7 @@ A Skill gives Claude new instructions and executable code. A malicious one can d
 ## Try it
 
 **Exercise 1 — Convert a prompt into a Skill.**
-Take the best template from your prompt library ([01-foundations/08](../01-foundations/08-structured-prompting.md)). Write it as a SKILL.md with proper frontmatter. Zip the folder. Upload it. Use it.
+Take the best template from your prompt library ([Structured prompting with XML](../01-foundations/structured-prompting.md)). Write it as a SKILL.md with proper frontmatter. Zip the folder. Upload it. Use it.
 
 **Exercise 2 — Description A/B.**
 Write two descriptions for the same skill: one vague, one specific with trigger words. Install each in turn and try five naturally-phrased requests. Count how often it fired.

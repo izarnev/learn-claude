@@ -106,7 +106,7 @@ Rules:
 
 XML tags are also an *output* control: "Put your reasoning in `<analysis>` tags and the final answer in `<answer>` tags" makes post-processing trivial and keeps the two separated.
 
-Covered further in [module 08](08-structured-prompting.md).
+Covered further in [Structured prompting with XML](structured-prompting.md).
 
 ---
 

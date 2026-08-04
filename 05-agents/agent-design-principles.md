@@ -149,7 +149,7 @@ Instructions are requests. Enforcement is code.
 
 ### 5. Observability
 
-You cannot debug what you can't see. Log every turn: the prompt, the tools called, the results, the tokens, the decision. Covered in [06-production/04](../06-production/04-observability.md).
+You cannot debug what you can't see. Log every turn: the prompt, the tools called, the results, the tokens, the decision. Covered in [Observability](../06-production/observability.md).
 
 ---
 

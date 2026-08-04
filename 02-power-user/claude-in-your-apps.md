@@ -91,7 +91,7 @@ Related: if you're generating frontends via chat or the API, Anthropic publishes
 
 Security-focused workflows. See [Use Claude Security](https://support.claude.com/en/articles/14661296-use-claude-security).
 
-For developers, the related tool is the **security-guidance plugin** for Claude Code, which has Claude review its own code changes for vulnerabilities and fix them in the same session — covered in [03-claude-code/10](../03-claude-code/10-plugins-and-marketplaces.md).
+For developers, the related tool is the **security-guidance plugin** for Claude Code, which has Claude review its own code changes for vulnerabilities and fix them in the same session — covered in [Plugins and marketplaces](../03-claude-code/plugins-and-marketplaces.md).
 
 ---
 

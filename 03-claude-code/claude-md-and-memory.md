@@ -48,7 +48,7 @@ Files in **subdirectories** below your working directory load on demand, when Cl
 
 This is the rule everyone breaks. Longer files consume more context **and reduce adherence**. A 600-line CLAUDE.md is worse than a 150-line one, not better.
 
-If yours is growing, move content to [rules](#rules) or [skills](06-skills-and-commands.md).
+If yours is growing, move content to [rules](#rules) or [skills](skills-and-commands.md).
 
 `/doctor` proposes trims: it cuts what Claude can derive from the codebase (directory layouts, dependency lists, architecture overviews) and keeps pitfalls, rationale, and conventions that differ from tool defaults. That's the right instinct — **CLAUDE.md is for what Claude can't work out on its own.**
 
@@ -274,7 +274,7 @@ CLAUDE.md is delivered as a user message after the system prompt, not as part of
 2. Check the file is in a loaded location.
 3. Make instructions more specific.
 4. Look for conflicting instructions across files.
-5. If it must happen at a specific point, make it a [hook](08-hooks.md).
+5. If it must happen at a specific point, make it a [hook](hooks.md).
 
 For system-prompt-level instructions, `--append-system-prompt` works but must be passed every invocation — better for scripts than interactive use.
 

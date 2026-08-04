@@ -67,8 +67,8 @@ Per million tokens (MTok), August 2026:
 
 ### The three discounts that matter
 
-1. **Prompt caching.** Cache a large, stable prefix (system prompt, documents, tool definitions) and reads against it cost a fraction of normal input. For agents that resend the same context every turn, this is often a 70–90% saving. See [04-api/07](../04-api/07-prompt-caching.md).
-2. **Batch API.** Submit work asynchronously for a substantial discount. Perfect for evals, bulk classification, and offline processing. See [04-api/09](../04-api/09-streaming-and-batch.md).
+1. **Prompt caching.** Cache a large, stable prefix (system prompt, documents, tool definitions) and reads against it cost a fraction of normal input. For agents that resend the same context every turn, this is often a 70–90% saving. See [Prompt caching](../04-api/prompt-caching.md).
+2. **Batch API.** Submit work asynchronously for a substantial discount. Perfect for evals, bulk classification, and offline processing. See [Streaming and batch processing](../04-api/streaming-and-batch.md).
 3. **Model routing.** Use Haiku for classification and extraction, Sonnet for the bulk of work, Opus only where it changes the outcome. Haiku is 5× cheaper than Sonnet and 25× cheaper than Fable.
 
 ### What things actually cost — rough intuition
@@ -111,7 +111,7 @@ If you're deploying to a team, these exist and are worth knowing about early:
 - **Customer-managed encryption keys** — AWS KMS, Azure Key Vault, Google Cloud KMS
 - **Workload Identity Federation** — API access without long-lived keys
 
-Covered in [06-production/05](../06-production/05-enterprise-and-governance.md).
+Covered in [Enterprise and governance](../06-production/enterprise-and-governance.md).
 
 ---
 

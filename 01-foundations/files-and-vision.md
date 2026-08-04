@@ -35,7 +35,7 @@ This is worth understanding because it explains several confusing behaviours.
 
 **Images** are converted into tokens based on dimensions. A large screenshot can cost a few thousand tokens. Resizing a 4000px screenshot down to 1500px before uploading saves real money and usually loses nothing.
 
-**Spreadsheets** are converted to a text representation. For anything with formulas, pivot logic, or many sheets, this loses fidelity — use Claude for Excel (module [02-power-user/05](../02-power-user/05-claude-in-your-apps.md)) or ask Claude to write code against the file instead.
+**Spreadsheets** are converted to a text representation. For anything with formulas, pivot logic, or many sheets, this loses fidelity — use Claude for Excel (see [Claude inside your apps](../02-power-user/claude-in-your-apps.md)) or ask Claude to write code against the file instead.
 
 ### The consequence
 
@@ -44,7 +44,7 @@ Everything you attach consumes context on **every subsequent turn**. Attaching a
 **Better patterns:**
 
 - Attach only the pages or sections you need
-- For repeated use of the same material, put it in a **Project** knowledge base (module [02-power-user/01](../02-power-user/01-projects.md)) so it's retrieved rather than always resident
+- For repeated use of the same material, put it in a **Project** knowledge base (see [Projects](../02-power-user/projects.md)) so it's retrieved rather than always resident
 - For very large corpora, let Claude write code to search the files rather than reading them all
 
 ---
@@ -53,7 +53,7 @@ Everything you attach consumes context on **every subsequent turn**. Attaching a
 
 ### Ask for evidence, not just answers
 
-The quote-grounding pattern from [module 02](02-prompting-fundamentals.md) matters most here:
+The quote-grounding pattern from [Prompting fundamentals](prompting-fundamentals.md) matters most here:
 
 > Find the passages in the attached contract relevant to termination rights. Quote them verbatim in `<quotes>` tags with page numbers. Then, based only on those quotes, answer: under what circumstances can either party terminate early?
 
@@ -149,4 +149,4 @@ Attach a large PDF and have a 15-turn conversation. Then start fresh, extract th
 - [Vision](https://platform.claude.com/docs/en/build-with-claude/vision)
 - [PDF support](https://platform.claude.com/docs/en/build-with-claude/pdf-support)
 - [Coordinates and bounding boxes](https://platform.claude.com/docs/en/build-with-claude/vision-coordinates)
-- [Files API](https://platform.claude.com/docs/en/build-with-claude/files) — for programmatic use, covered in [04-api/08](../04-api/08-vision-pdfs-files.md)
+- [Files API](https://platform.claude.com/docs/en/build-with-claude/files) — for programmatic use, covered in [Vision, PDFs, and the Files API](../04-api/vision-pdfs-files.md)

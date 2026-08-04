@@ -117,7 +117,7 @@ Note the current limitation: what Claude remembers about you in chat does **not*
 
 Plugins bundle skills, connectors and subagents into one installable package, customised for your role or team. Install from the plugin directory. Some plugins include local MCP servers and work through the desktop app only.
 
-Covered in [module 07](07-plugins.md).
+Covered in [Plugins](plugins.md).
 
 ---
 
@@ -125,7 +125,7 @@ Covered in [module 07](07-plugins.md).
 
 Type `/schedule` in any Cowork task, or use "Scheduled" in the left sidebar. Scheduled tasks run in the cloud — no device online, no desktop app open.
 
-Covered in [module 06](06-automation.md).
+Covered in [Automation: scheduled tasks and routines](automation.md).
 
 ---
 

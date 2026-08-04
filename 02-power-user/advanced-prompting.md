@@ -83,7 +83,7 @@ This is more work than one prompt and produces dramatically better output on any
 
 ## Pattern 5 — Grounding and evidence
 
-From [01-foundations/02](../01-foundations/02-prompting-fundamentals.md), but worth repeating because it's the main hallucination defence:
+From [Prompting fundamentals](../01-foundations/prompting-fundamentals.md), but worth repeating because it's the main hallucination defence:
 
 ```
 Step 1: Extract every passage from the source relevant to the question into

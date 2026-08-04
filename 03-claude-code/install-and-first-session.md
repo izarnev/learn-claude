@@ -154,7 +154,7 @@ Press **`Shift+Tab`** to cycle modes. This is the most important control in the 
 | `dontAsk` | Fewer prompts |
 | `bypassPermissions` | No prompts at all |
 
-Start in `default`. Move to `acceptEdits` once you trust it on a given repo. Use `plan` for anything you want to review before it happens. Covered in depth in [module 04](04-permissions-and-safety.md).
+Start in `default`. Move to `acceptEdits` once you trust it on a given repo. Use `plan` for anything you want to review before it happens. Covered in depth in [Permissions, sandboxing, and safety](permissions-and-safety.md).
 
 ---
 

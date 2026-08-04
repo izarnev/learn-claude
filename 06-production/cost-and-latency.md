@@ -52,7 +52,7 @@ Also configure `--fallback-model` / `fallbackModel` so an overloaded primary doe
 
 ### 2. Prompt caching — 70–90% on input
 
-For any stable prefix over ~2k tokens used repeatedly. See [04-api/07](../04-api/07-prompt-caching.md).
+For any stable prefix over ~2k tokens used repeatedly. See [Prompt caching](../04-api/prompt-caching.md).
 
 The check: is `cache_read_input_tokens` non-zero on repeat calls? If not, something in your prefix changes per request.
 
@@ -80,7 +80,7 @@ Note on Opus 5: it defaults to longer responses than prior models, and changing 
 
 ### 7. Context management
 
-For agents: subagents for isolation, context editing to drop stale tool results, state files instead of compaction. See [05-agents/03](../05-agents/03-context-engineering.md).
+For agents: subagents for isolation, context editing to drop stale tool results, state files instead of compaction. See [Context engineering](../05-agents/context-engineering.md).
 
 ### 8. Tool result size
 

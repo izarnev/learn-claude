@@ -146,7 +146,7 @@ tool_choice={"type": "tool", "name": "get_weather"} # must use this one
 tool_choice={"type": "none"}                        # no tools
 ```
 
-`{"type": "tool", ...}` is the reliable way to get structured extraction via a tool — though [structured outputs](06-structured-outputs.md) is usually cleaner now.
+`{"type": "tool", ...}` is the reliable way to get structured extraction via a tool — though [structured outputs](structured-outputs.md) is usually cleaner now.
 
 ---
 
@@ -226,7 +226,7 @@ Also: [Manage tool context](https://platform.claude.com/docs/en/agents-and-tools
 
 ## Tool use with caching
 
-Tool definitions are a stable prefix — cache them. See [Tool use with prompt caching](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-use-with-prompt-caching) and [module 07](07-prompt-caching.md).
+Tool definitions are a stable prefix — cache them. See [Tool use with prompt caching](https://platform.claude.com/docs/en/agents-and-tools/tool-use/tool-use-with-prompt-caching) and [Prompt caching](prompt-caching.md).
 
 ---
 

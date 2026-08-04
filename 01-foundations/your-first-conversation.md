@@ -28,7 +28,7 @@ Rules of thumb:
 - **Fable** — the frontier option for long-running, genuinely difficult work.
 - **Haiku** — when speed is everything.
 
-Covered properly in [module 03](03-models-and-modes.md).
+Covered properly in [Models, effort, and thinking](models-and-modes.md).
 
 ### Effort / thinking controls
 
@@ -38,7 +38,7 @@ Default is fine for most things. Raise it for maths, architecture decisions, sub
 
 ### The attachment button
 
-Files, images, screenshots. Drag-and-drop and paste both work. See [module 04](04-files-and-vision.md).
+Files, images, screenshots. Drag-and-drop and paste both work. See [Files, images, and vision](files-and-vision.md).
 
 ### Web search and Research
 
@@ -47,7 +47,7 @@ Two different things:
 - **Web search** — Claude does a few lookups and cites them
 - **Research** — Claude runs a multi-step investigation across many sources and produces a report
 
-See [module 06](06-search-and-research.md).
+See [Web search and Research](search-and-research.md).
 
 ### Editing and branching
 
@@ -59,7 +59,7 @@ You can also **retry** a Claude response to get a different generation from the 
 
 ### Projects
 
-A container with its own knowledge base and standing instructions. Covered in [02-power-user/01](../02-power-user/01-projects.md).
+A container with its own knowledge base and standing instructions. Covered in [Projects](../02-power-user/projects.md).
 
 ---
 

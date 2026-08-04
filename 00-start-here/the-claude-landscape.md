@@ -53,17 +53,17 @@ What lives here:
 
 | Feature | What it does | Covered in |
 |---|---|---|
-| Conversations | The basic chat | [01-foundations/01](../01-foundations/01-your-first-conversation.md) |
-| Artifacts | Live, rendered output — code, HTML, docs, diagrams | [01-foundations/05](../01-foundations/05-artifacts-and-file-creation.md) |
-| File upload | PDFs, images, spreadsheets, code | [01-foundations/04](../01-foundations/04-files-and-vision.md) |
-| File creation | Real .docx, .xlsx, .pptx, .pdf outputs | [01-foundations/05](../01-foundations/05-artifacts-and-file-creation.md) |
-| Web search & Research | Live lookups; Research runs a multi-step investigation | [01-foundations/06](../01-foundations/06-search-and-research.md) |
-| Memory & personalisation | Claude remembers preferences across chats | [01-foundations/07](../01-foundations/07-memory-and-personalisation.md) |
-| Projects | A workspace with its own knowledge base and instructions | [02-power-user/01](../02-power-user/01-projects.md) |
-| Skills | Custom, reusable capabilities | [02-power-user/02](../02-power-user/02-skills.md) |
-| Connectors | MCP integrations to Gmail, Drive, Slack, Jira, etc. | [02-power-user/03](../02-power-user/03-connectors-and-mcp.md) |
-| Claude Design | A canvas for design work | [02-power-user/05](../02-power-user/05-claude-in-your-apps.md) |
-| Incognito chats | Conversations that don't persist | [01-foundations/07](../01-foundations/07-memory-and-personalisation.md) |
+| Conversations | The basic chat | [Your first real conversation](../01-foundations/your-first-conversation.md) |
+| Artifacts | Live, rendered output — code, HTML, docs, diagrams | [Artifacts and file creation](../01-foundations/artifacts-and-file-creation.md) |
+| File upload | PDFs, images, spreadsheets, code | [Files, images, and vision](../01-foundations/files-and-vision.md) |
+| File creation | Real .docx, .xlsx, .pptx, .pdf outputs | [Artifacts and file creation](../01-foundations/artifacts-and-file-creation.md) |
+| Web search & Research | Live lookups; Research runs a multi-step investigation | [Web search and Research](../01-foundations/search-and-research.md) |
+| Memory & personalisation | Claude remembers preferences across chats | [Memory and personalisation](../01-foundations/memory-and-personalisation.md) |
+| Projects | A workspace with its own knowledge base and instructions | [Projects](../02-power-user/projects.md) |
+| Skills | Custom, reusable capabilities | [Skills](../02-power-user/skills.md) |
+| Connectors | MCP integrations to Gmail, Drive, Slack, Jira, etc. | [Connectors and MCP, explained without code](../02-power-user/connectors-and-mcp.md) |
+| Claude Design | A canvas for design work | [Claude inside your apps](../02-power-user/claude-in-your-apps.md) |
+| Incognito chats | Conversations that don't persist | [Memory and personalisation](../01-foundations/memory-and-personalisation.md) |
 
 **Use it for:** thinking, writing, analysis, one-off questions, anything conversational.
 
@@ -84,7 +84,7 @@ The non-developer agent. A visual interface where Claude works on multi-step tas
 
 **Use it for:** "here is a folder, do a job with it" — no terminal, no code.
 
-Covered in [02-power-user/04](../02-power-user/04-cowork.md).
+Covered in [Cowork](../02-power-user/cowork.md).
 
 ### Claude Code
 
@@ -114,7 +114,7 @@ Claude showing up where you already work.
 | **Claude in Xcode** | Apple-platform development |
 | **Claude Security** | Security-focused workflows |
 
-Covered in [02-power-user/05](../02-power-user/05-claude-in-your-apps.md).
+Covered in [Claude inside your apps](../02-power-user/claude-in-your-apps.md).
 
 ---
 
@@ -132,13 +132,13 @@ Covered in [stage 04](../04-api/).
 
 Claude Code as a library. You get the agentic loop, the tool suite, hooks, permissions, subagents, skills, and session management — with full control over orchestration. Python and TypeScript.
 
-Covered in [05-agents/02](../05-agents/02-agent-sdk.md).
+Covered in [The Claude Agent SDK](../05-agents/agent-sdk.md).
 
 ### Managed Agents
 
 Anthropic-hosted agents that run in a managed cloud sandbox. You define the agent; Anthropic runs it. Supports scheduled deployments, webhooks, memory stores, and multi-agent orchestration without you operating infrastructure.
 
-Covered in [05-agents/05](../05-agents/05-managed-agents.md).
+Covered in [Managed Agents](../05-agents/managed-agents.md).
 
 ### Claude Console
 

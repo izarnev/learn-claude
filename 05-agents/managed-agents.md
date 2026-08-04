@@ -47,7 +47,7 @@ Start a session, stream events, operate on it mid-run.
 
 ### Outcomes
 
-Define what "done" means, declaratively. This is the termination-condition problem from [module 01](01-agent-design-principles.md), given first-class support.
+Define what "done" means, declaratively. This is the termination-condition problem from [Agent design principles](agent-design-principles.md), given first-class support.
 
 See [Define outcomes](https://platform.claude.com/docs/en/managed-agents/define-outcomes).
 
@@ -61,7 +61,7 @@ Configure the cloud environment the agent runs in — or bring your own sandbox 
 
 ### Memory stores
 
-Persistent memory across sessions, as a managed resource. This is the "external state" principle from [module 03](03-context-engineering.md), without you running the storage.
+Persistent memory across sessions, as a managed resource. This is the "external state" principle from [Context engineering](context-engineering.md), without you running the storage.
 
 See [Memory stores](https://platform.claude.com/docs/en/managed-agents/memory).
 
