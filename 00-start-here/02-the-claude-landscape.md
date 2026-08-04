@@ -99,7 +99,7 @@ Surfaces: terminal CLI, VS Code, JetBrains, desktop app, web (`claude.ai/code`),
 
 **Use it for:** anything involving a repository.
 
-Covered in all of [stage 03](../03-claude-code/).
+Covered in all of [stage 03](../03-claude-code/01-install-and-first-session.md).
 
 > **Cowork vs Claude Code:** same underlying agentic engine, different audience. Cowork is file-and-document oriented with a GUI; Claude Code is repository oriented and code-native. If your task has a `git` directory in it, use Claude Code.
 
@@ -131,7 +131,7 @@ Direct model access over HTTP. The Messages API is the core endpoint. Official S
 
 Also available through Amazon Bedrock, Claude Platform on AWS, Google Cloud, and Microsoft Foundry.
 
-Covered in [stage 04](../04-api/).
+Covered in [stage 04](../04-api/00-pricing-and-rate-limits.md).
 
 ### Claude Agent SDK
 
