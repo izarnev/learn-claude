@@ -13,63 +13,103 @@
 {% assign current_index = 0 %}
 {% assign current_count = 0 %}
 
-<div class="shell">
-  <nav class="sidebar" aria-label="Modules">
-    <a class="brand" href="{{ '/' | relative_url }}">Learn Claude</a>
-    {% for stage in site.stages %}
-      {% assign stage_pages = site.pages | where_exp: "p", "p.url contains stage.slug" | sort: "url" %}
-      {% if stage_pages.size > 0 %}
-      {% assign is_current_stage = false %}
-      {% if page.url contains stage.slug %}{% assign is_current_stage = true %}{% endif %}
-      <details class="stage"{% if is_current_stage %} open{% endif %}>
-        <summary class="stage-name">{{ stage.slug | slice: 0, 2 }} · {{ stage.name }}</summary>
-        <ul>
-          {% for item in stage_pages %}
-            {% assign is_current = false %}
-            {% if item.url == page.url %}{% assign is_current = true %}{% endif %}
-            {% if is_current %}
-              {% assign current_stage = stage.name %}
-              {% assign current_index = forloop.index %}
-              {% assign current_count = stage_pages.size %}
-            {% endif %}
-            <li><a href="{{ item.url | relative_url }}"{% if is_current %} class="current" aria-current="page"{% endif %}>{{ item.title | default: item.name }}</a></li>
-          {% endfor %}
-        </ul>
-      </details>
-      {% endif %}
-    {% endfor %}
-  </nav>
+<header class="topbar">
+  <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="sidebar">
+    <span class="nav-toggle-bars" aria-hidden="true"></span>
+    <span class="visually-hidden">Menu</span>
+  </button>
+  <a class="topbar-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
+</header>
 
-  <main class="content">
-    {% if current_stage != "" %}
-    <div class="eyebrow">{{ current_stage }} · module {{ current_index }} of {{ current_count }}</div>
+<div class="nav-backdrop" id="nav-backdrop" hidden></div>
+
+<nav class="sidebar" id="sidebar" aria-label="Modules">
+  {% for stage in site.stages %}
+    {% assign stage_pages = site.pages | where_exp: "p", "p.url contains stage.slug" | sort: "url" %}
+    {% if stage_pages.size > 0 %}
+    {% assign is_current_stage = false %}
+    {% if page.url contains stage.slug %}{% assign is_current_stage = true %}{% endif %}
+    <details class="stage"{% if is_current_stage %} open{% endif %}>
+      <summary class="stage-name">{{ stage.slug | slice: 0, 2 }} · {{ stage.name }}</summary>
+      <ul>
+        {% for item in stage_pages %}
+          {% assign is_current = false %}
+          {% if item.url == page.url %}{% assign is_current = true %}{% endif %}
+          {% if is_current %}
+            {% assign current_stage = stage.name %}
+            {% assign current_index = forloop.index %}
+            {% assign current_count = stage_pages.size %}
+          {% endif %}
+          <li><a href="{{ item.url | relative_url }}"{% if is_current %} class="current" aria-current="page"{% endif %}>{{ item.title | default: item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </details>
     {% endif %}
-    {{ content }}
-    <footer class="page-footer">
-      {% if site.github_repo %}<a href="https://github.com/{{ site.github_repo }}" class="edit-link">View source on GitHub</a>{% endif %}
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
-    </footer>
-  </main>
-</div>
+  {% endfor %}
+</nav>
+
+<main class="content">
+  {% if current_stage != "" %}
+  <div class="eyebrow">{{ current_stage }} · module {{ current_index }} of {{ current_count }}</div>
+  {% endif %}
+  {{ content }}
+  {% if site.github_repo %}
+  <footer class="page-footer">
+    <a href="https://github.com/{{ site.github_repo }}" class="edit-link">View source on GitHub</a>
+  </footer>
+  {% endif %}
+</main>
 
 <script>
 (function () {
   var root = document.documentElement;
-  var btn = document.getElementById('theme-toggle');
+
+  /* dark mode toggle, top right */
+  var themeBtn = document.getElementById('theme-toggle');
   var stored = localStorage.getItem('almanac-theme');
   if (stored) root.setAttribute('data-theme', stored);
-  function sync() {
+  function syncTheme() {
     var isDark = (root.getAttribute('data-theme') === 'dark') ||
       (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);
-    btn.textContent = isDark ? '☀' : '☾';
+    themeBtn.textContent = isDark ? '☀' : '☾';
   }
-  btn.addEventListener('click', function () {
+  themeBtn.addEventListener('click', function () {
     var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
     root.setAttribute('data-theme', next);
     localStorage.setItem('almanac-theme', next);
-    sync();
+    syncTheme();
   });
-  sync();
+  syncTheme();
+
+  /* off-canvas nav: hidden to the side until toggled open */
+  var navBtn = document.getElementById('nav-toggle');
+  var sidebar = document.getElementById('sidebar');
+  var backdrop = document.getElementById('nav-backdrop');
+
+  sidebar.inert = true;
+  function openNav() {
+    sidebar.classList.add('open');
+    sidebar.inert = false;
+    backdrop.hidden = false;
+    navBtn.setAttribute('aria-expanded', 'true');
+  }
+  function closeNav() {
+    sidebar.classList.remove('open');
+    sidebar.inert = true;
+    backdrop.hidden = true;
+    navBtn.setAttribute('aria-expanded', 'false');
+  }
+  navBtn.addEventListener('click', function () {
+    if (sidebar.classList.contains('open')) closeNav(); else openNav();
+  });
+  backdrop.addEventListener('click', closeNav);
+  sidebar.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') closeNav();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeNav();
+  });
 })();
 </script>
 </body>
