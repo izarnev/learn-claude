@@ -52,11 +52,22 @@ a:hover{ text-decoration-thickness:2px; }
   font-size:1.1rem; color:var(--ink); text-decoration:none; margin-bottom:1.6rem;
   border-bottom:2px solid var(--accent); padding-bottom:.6rem;
 }
-.stage{ margin-bottom:1.3rem; }
+.stage{ margin-bottom:.2rem; border-bottom:1px solid var(--rule); }
+.stage:last-of-type{ border-bottom:none; }
 .stage-name{
+  display:flex; align-items:center; gap:.4rem; cursor:pointer; list-style:none;
   font-size:.68rem; text-transform:uppercase; letter-spacing:.1em; color:var(--ink-soft);
-  font-weight:700; margin-bottom:.4rem;
+  font-weight:700; padding:.7rem 0; user-select:none;
 }
+.stage-name::-webkit-details-marker{ display:none; }
+.stage-name::before{
+  content:"›"; display:inline-block; font-size:1rem; line-height:1; color:var(--ink-soft);
+  transform:rotate(0deg); transition:transform .15s ease;
+}
+.stage[open] > .stage-name::before{ transform:rotate(90deg); }
+.stage-name:hover{ color:var(--ink); }
+.stage-name:hover::before{ color:var(--accent); }
+.stage ul{ padding-bottom:.6rem; }
 .sidebar ul{ list-style:none; margin:0; padding:0; }
 .sidebar li a{
   display:block; padding:.3rem 0 .3rem .65rem; margin-left:-.65rem; color:var(--ink-soft);

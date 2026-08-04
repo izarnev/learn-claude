@@ -19,8 +19,10 @@
     {% for stage in site.stages %}
       {% assign stage_pages = site.pages | where_exp: "p", "p.url contains stage.slug" | sort: "url" %}
       {% if stage_pages.size > 0 %}
-      <div class="stage">
-        <div class="stage-name">{{ stage.slug | slice: 0, 2 }} · {{ stage.name }}</div>
+      {% assign is_current_stage = false %}
+      {% if page.url contains stage.slug %}{% assign is_current_stage = true %}{% endif %}
+      <details class="stage"{% if is_current_stage %} open{% endif %}>
+        <summary class="stage-name">{{ stage.slug | slice: 0, 2 }} · {{ stage.name }}</summary>
         <ul>
           {% for item in stage_pages %}
             {% assign is_current = false %}
@@ -33,7 +35,7 @@
             <li><a href="{{ item.url | relative_url }}"{% if is_current %} class="current" aria-current="page"{% endif %}>{{ item.title | default: item.name }}</a></li>
           {% endfor %}
         </ul>
-      </div>
+      </details>
       {% endif %}
     {% endfor %}
   </nav>
