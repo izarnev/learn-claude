@@ -167,10 +167,13 @@ a:hover{ text-decoration-thickness:2px; }
    needed since the source files use plain Markdown throughout. */
 
 .page-nav{
-  display:flex; justify-content:space-between; gap:1rem;
+  /* no justify-content here on purpose: .page-nav-next's own margin-left:auto
+     is what pushes it flush right, and that works whether prev is present,
+     absent, or it's the only link in the row — space-between only handled
+     the "both present" case and silently misaligned the other two. */
+  display:flex; flex-wrap:wrap; gap:1rem;
   margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--rule);
 }
-.page-nav-spacer{ flex:1; }
 .page-nav-link{
   display:flex; flex-direction:column; gap:.3rem; max-width:46%;
   padding:.8rem 1rem; border:1px solid var(--rule); text-decoration:none;
@@ -184,13 +187,12 @@ a:hover{ text-decoration-thickness:2px; }
 .page-nav-link:hover .page-nav-title{ color:var(--accent); }
 .page-nav-prev{ text-align:left; }
 .page-nav-prev .page-nav-title::before{ content:"← "; }
-.page-nav-next{ text-align:right; margin-left:auto; align-items:flex-end; }
+.page-nav-next{ text-align:right; align-items:flex-end; margin-left:auto; }
 .page-nav-next .page-nav-title::after{ content:" →"; }
 
 @media (max-width:640px){
   .page-nav{ flex-direction:column; }
-  .page-nav-link, .page-nav-spacer{ max-width:none; }
-  .page-nav-spacer{ display:none; }
+  .page-nav-link{ max-width:none; }
   .page-nav-next{ text-align:left; align-items:flex-start; margin-left:0; }
   .page-nav-next .page-nav-title::after{ content:""; }
   .page-nav-next .page-nav-title::before{ content:"→ "; }
