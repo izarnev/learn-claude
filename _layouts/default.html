@@ -31,7 +31,7 @@
     {% assign is_current_stage = false %}
     {% if page.url contains stage.slug %}{% assign is_current_stage = true %}{% endif %}
     <details class="stage"{% if is_current_stage %} open{% endif %}>
-      <summary class="stage-name">{{ stage.slug | slice: 0, 2 }} · {{ stage.name }}</summary>
+      <summary class="stage-name">{{ stage.name }}</summary>
       <ul>
         {% for item in stage_pages %}
           {% assign is_current = false %}
