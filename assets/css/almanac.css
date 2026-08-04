@@ -110,9 +110,9 @@ a:hover{ text-decoration-thickness:2px; }
 .content{
   padding:clamp(2rem, 6vw, 3rem) clamp(1.25rem, 5vw, 3rem) clamp(3rem, 8vw, 6rem);
   /* was a fixed 720px, so laptop/desktop viewports left most of the screen
-     empty on both sides. Now grows with the viewport up to 75% of it, capped
-     so it doesn't run away to unreadable line lengths on ultra-wide monitors. */
-  max-width:min(75vw, 1200px);
+     empty on both sides. Now grows with the viewport, uncapped, so it keeps
+     scaling on desktop and ultra-wide screens too. */
+  max-width:75vw;
   margin:0 auto;
 }
 .eyebrow{
