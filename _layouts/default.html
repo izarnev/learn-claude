@@ -81,8 +81,6 @@
         <span class="page-nav-label">Previous</span>
         <span class="page-nav-title">{{ prev_page.title | default: prev_page.name }}</span>
       </a>
-    {% else %}
-      <span class="page-nav-spacer"></span>
     {% endif %}
     {% if next_page %}
       <a class="page-nav-link page-nav-next" href="{{ next_page.url | relative_url }}">
