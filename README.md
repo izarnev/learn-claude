@@ -1,3 +1,7 @@
+---
+title: "Claude: Zero to Hero"
+---
+
 # Claude: Zero to Hero
 
 A complete, step-by-step learning track for Claude — from "I've never typed a prompt" to "I ship production agents."

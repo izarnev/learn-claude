@@ -1,3 +1,7 @@
+---
+title: "Prompting cheat sheet"
+---
+
 # Prompting cheat sheet
 
 Copy-paste patterns. Everything here is used in the modules; this is the lookup version.

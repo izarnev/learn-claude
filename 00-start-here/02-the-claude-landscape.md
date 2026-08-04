@@ -1,3 +1,7 @@
+---
+title: "02 · The Claude landscape"
+---
+
 # 02 · The Claude landscape
 
 **What you'll learn:** every place Claude exists, what each one is for, and how they relate — so you always know which door to walk through.

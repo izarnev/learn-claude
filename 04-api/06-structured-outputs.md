@@ -1,3 +1,7 @@
+---
+title: "06 · Structured outputs"
+---
+
 # 06 · Structured outputs
 
 **What you'll learn:** how to guarantee Claude returns JSON matching your schema, so you can stop writing parsers and retry loops.

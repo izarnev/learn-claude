@@ -1,3 +1,7 @@
+---
+title: "07 · Plugins"
+---
+
 # 07 · Plugins
 
 **What you'll learn:** what a plugin bundles, where to find good ones, and when to build your own.

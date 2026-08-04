@@ -1,3 +1,7 @@
+---
+title: "02 · The Messages API in depth"
+---
+
 # 02 · The Messages API in depth
 
 **What you'll learn:** every part of a request and response you'll actually use, and the patterns that avoid the common mistakes.

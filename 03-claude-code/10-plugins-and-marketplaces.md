@@ -1,3 +1,7 @@
+---
+title: "10 · Plugins and marketplaces"
+---
+
 # 10 · Plugins and marketplaces
 
 **What you'll learn:** how to package your Claude Code setup so it travels — to another repo, another teammate, or the world.

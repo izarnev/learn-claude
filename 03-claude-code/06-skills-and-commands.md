@@ -1,3 +1,7 @@
+---
+title: "06 · Skills and slash commands"
+---
+
 # 06 · Skills and slash commands
 
 **What you'll learn:** how to package repeatable workflows so you stop retyping them, and how to control who can trigger what.

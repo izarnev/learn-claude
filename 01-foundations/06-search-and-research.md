@@ -1,3 +1,7 @@
+---
+title: "06 · Web search and Research"
+---
+
 # 06 · Web search and Research
 
 **What you'll learn:** when to use plain search vs. Research mode, and how to get output you can actually trust.

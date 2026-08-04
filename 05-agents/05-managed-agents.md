@@ -1,3 +1,7 @@
+---
+title: "05 · Managed Agents"
+---
+
 # 05 · Managed Agents
 
 **What you'll learn:** running agents on Anthropic's infrastructure instead of your own.

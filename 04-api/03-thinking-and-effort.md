@@ -1,3 +1,7 @@
+---
+title: "03 · Thinking and effort"
+---
+
 # 03 · Thinking and effort
 
 **What you'll learn:** how to control how hard Claude thinks, and how to avoid paying for reasoning you don't need.

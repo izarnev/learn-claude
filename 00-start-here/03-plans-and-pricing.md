@@ -1,3 +1,7 @@
+---
+title: "03 · Plans, pricing, and limits"
+---
+
 # 03 · Plans, pricing, and limits
 
 **What you'll learn:** what to pay for, when, and how usage limits actually behave — so you don't get blocked mid-task or overspend on the API.

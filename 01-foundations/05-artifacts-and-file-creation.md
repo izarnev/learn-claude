@@ -1,3 +1,7 @@
+---
+title: "05 · Artifacts and file creation"
+---
+
 # 05 · Artifacts and file creation
 
 **What you'll learn:** the difference between an artifact and a real file, when each appears, and how to get Claude to produce genuinely useful deliverables.

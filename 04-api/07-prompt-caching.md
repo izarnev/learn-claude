@@ -1,3 +1,7 @@
+---
+title: "07 · Prompt caching"
+---
+
 # 07 · Prompt caching
 
 **What you'll learn:** the single biggest cost optimisation available on the API, and how to avoid the mistakes that silently disable it.

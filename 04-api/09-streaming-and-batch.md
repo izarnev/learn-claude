@@ -1,3 +1,7 @@
+---
+title: "09 · Streaming and batch processing"
+---
+
 # 09 · Streaming and batch processing
 
 **What you'll learn:** the two ways to change *when* you get results — one for perceived speed, one for cost.

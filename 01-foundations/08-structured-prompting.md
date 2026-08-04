@@ -1,3 +1,7 @@
+---
+title: "08 · Structured prompting with XML"
+---
+
 # 08 · Structured prompting with XML
 
 **What you'll learn:** how to build reliable, reusable prompt templates using XML structure — the bridge between casual chat and production prompting.

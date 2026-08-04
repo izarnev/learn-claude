@@ -1,3 +1,7 @@
+---
+title: "01 · Agent design principles"
+---
+
 # 01 · Agent design principles
 
 **What you'll learn:** how to decide whether you need an agent at all, and how to design one that doesn't fall over.

@@ -1,3 +1,7 @@
+---
+title: "08 · Hooks"
+---
+
 # 08 · Hooks
 
 **What you'll learn:** how to make things happen deterministically, rather than hoping Claude remembers.

@@ -1,3 +1,7 @@
+---
+title: "01 · Your first real conversation"
+---
+
 # 01 · Your first real conversation
 
 **What you'll learn:** how to drive a Claude conversation deliberately rather than hopefully — including the interface controls most people never touch.

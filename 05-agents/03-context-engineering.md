@@ -1,3 +1,7 @@
+---
+title: "03 · Context engineering"
+---
+
 # 03 · Context engineering
 
 **What you'll learn:** the discipline that separates agents that work for ten turns from agents that work for a thousand.

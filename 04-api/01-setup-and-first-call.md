@@ -1,3 +1,7 @@
+---
+title: "01 · Setup and your first API call"
+---
+
 # 01 · Setup and your first API call
 
 **What you'll learn:** get an API key, make a call, and understand exactly what came back.

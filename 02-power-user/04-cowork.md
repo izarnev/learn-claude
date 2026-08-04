@@ -1,3 +1,7 @@
+---
+title: "04 · Cowork"
+---
+
 # 04 · Cowork
 
 **What you'll learn:** how to hand Claude a multi-step job and get finished work back — including the permission modes that decide how much you're in the loop.

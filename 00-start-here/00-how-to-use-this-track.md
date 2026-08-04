@@ -1,3 +1,7 @@
+---
+title: "00 · How to use this track"
+---
+
 # 00 · How to use this track
 
 **What you'll learn:** how to work through this material so it actually sticks.

@@ -1,3 +1,7 @@
+---
+title: "02 · Skills"
+---
+
 # 02 · Skills
 
 **What you'll learn:** what a Skill is, how progressive disclosure makes them nearly free, and how to write one that actually triggers.

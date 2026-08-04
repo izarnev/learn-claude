@@ -1,3 +1,7 @@
+---
+title: "01 · Install and first session"
+---
+
 # 01 · Install and first session
 
 **What you'll learn:** get Claude Code running and complete a real task with it.

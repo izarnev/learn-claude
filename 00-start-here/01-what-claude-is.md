@@ -1,3 +1,7 @@
+---
+title: "01 · What Claude actually is"
+---
+
 # 01 · What Claude actually is
 
 **What you'll learn:** a working mental model of what's happening when you talk to Claude — enough to explain its strengths and its failure modes without hand-waving.

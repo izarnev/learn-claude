@@ -1,3 +1,7 @@
+---
+title: "05 · CLAUDE.md, rules, and memory"
+---
+
 # 05 · CLAUDE.md, rules, and memory
 
 **What you'll learn:** how to give Claude persistent knowledge about your project, and why most CLAUDE.md files are too long to work.

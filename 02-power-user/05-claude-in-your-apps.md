@@ -1,3 +1,7 @@
+---
+title: "05 · Claude inside your apps"
+---
+
 # 05 · Claude inside your apps
 
 **What you'll learn:** every place Claude shows up outside claude.ai, and which one to reach for.

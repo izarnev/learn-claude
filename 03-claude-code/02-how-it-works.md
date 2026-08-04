@@ -1,3 +1,7 @@
+---
+title: "02 · How Claude Code works"
+---
+
 # 02 · How Claude Code works
 
 **What you'll learn:** the agentic loop, the built-in tools, and what's actually in your context window — the mental model that makes everything else predictable.

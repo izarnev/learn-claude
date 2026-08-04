@@ -1,3 +1,7 @@
+---
+title: "12 · Headless, CI, and automation"
+---
+
 # 12 · Headless, CI, and automation
 
 **What you'll learn:** running Claude Code without a human watching — in scripts, in CI, and on a schedule.

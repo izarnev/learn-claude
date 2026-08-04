@@ -1,3 +1,7 @@
+---
+title: "08 · Advanced prompting patterns"
+---
+
 # 08 · Advanced prompting patterns
 
 **What you'll learn:** the patterns that separate competent prompting from expert prompting — most of which are about *structuring the work*, not phrasing the request.

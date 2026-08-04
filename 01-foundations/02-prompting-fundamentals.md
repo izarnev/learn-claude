@@ -1,3 +1,7 @@
+---
+title: "02 · Prompting fundamentals"
+---
+
 # 02 · Prompting fundamentals
 
 **What you'll learn:** the six techniques that account for most of the quality difference between good and bad prompts — straight from Anthropic's own prompt engineering guidance.

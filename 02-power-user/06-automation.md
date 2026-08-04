@@ -1,3 +1,7 @@
+---
+title: "06 · Automation: scheduled tasks and routines"
+---
+
 # 06 · Automation: scheduled tasks and routines
 
 **What you'll learn:** how to make Claude do work on a schedule, and how to tell the difference between the several scheduling mechanisms.

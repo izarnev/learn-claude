@@ -1,3 +1,7 @@
+---
+title: "01 · Projects"
+---
+
 # 01 · Projects
 
 **What you'll learn:** how to use Projects to stop re-explaining yourself, and how project knowledge actually gets retrieved.

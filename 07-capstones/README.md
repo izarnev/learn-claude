@@ -1,3 +1,7 @@
+---
+title: "Capstone projects"
+---
+
 # Capstone projects
 
 Five projects, one per stage. Each has a spec, a done-check, and a stretch goal.

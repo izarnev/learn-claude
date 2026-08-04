@@ -1,3 +1,7 @@
+---
+title: "03 · Cost and latency optimisation"
+---
+
 # 03 · Cost and latency optimisation
 
 **What you'll learn:** the levers, ranked, so you optimise the thing that actually matters.

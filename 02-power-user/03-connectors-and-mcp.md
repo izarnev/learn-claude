@@ -1,3 +1,7 @@
+---
+title: "03 · Connectors and MCP, explained without code"
+---
+
 # 03 · Connectors and MCP, explained without code
 
 **What you'll learn:** what MCP actually is, how connectors work in the consumer apps, and the security model you need to understand before you connect anything.

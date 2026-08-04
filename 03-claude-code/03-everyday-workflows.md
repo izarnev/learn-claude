@@ -1,3 +1,7 @@
+---
+title: "03 · Everyday workflows"
+---
+
 # 03 · Everyday workflows
 
 **What you'll learn:** the concrete patterns for the things you'll actually do with Claude Code every day.

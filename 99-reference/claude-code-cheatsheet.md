@@ -1,3 +1,7 @@
+---
+title: "Claude Code cheat sheet"
+---
+
 # Claude Code cheat sheet
 
 *Verify against the [CLI reference](https://code.claude.com/docs/en/cli-reference) — this ships weekly.*

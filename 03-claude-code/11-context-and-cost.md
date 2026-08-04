@@ -1,3 +1,7 @@
+---
+title: "11 · Context and cost management"
+---
+
 # 11 · Context and cost management
 
 **What you'll learn:** why sessions get slow and expensive, and the specific levers that fix it.

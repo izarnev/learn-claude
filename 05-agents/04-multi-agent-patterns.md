@@ -1,3 +1,7 @@
+---
+title: "04 · Multi-agent patterns"
+---
+
 # 04 · Multi-agent patterns
 
 **What you'll learn:** when several agents beat one, and how to coordinate them without creating a mess.

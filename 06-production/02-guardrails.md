@@ -1,3 +1,7 @@
+---
+title: "02 · Guardrails and safety"
+---
+
 # 02 · Guardrails and safety
 
 **What you'll learn:** the failure modes of LLM systems in production and the specific controls for each.

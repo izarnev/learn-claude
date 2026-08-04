@@ -1,3 +1,7 @@
+---
+title: "07 · Memory and personalisation"
+---
+
 # 07 · Memory and personalisation
 
 **What you'll learn:** how Claude carries context across conversations, how to control it, and how to make Claude sound like you rather than like a press release.

@@ -1,3 +1,7 @@
+---
+title: "04 · Files, images, and vision"
+---
+
 # 04 · Files, images, and vision
 
 **What you'll learn:** how to get material into Claude effectively, and how to work with images and PDFs without wasting context or getting hallucinated readings.

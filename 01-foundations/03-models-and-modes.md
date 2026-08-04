@@ -1,3 +1,7 @@
+---
+title: "03 · Models, effort, and thinking"
+---
+
 # 03 · Models, effort, and thinking
 
 **What you'll learn:** which Claude model to use for what, and how the effort and thinking controls change behaviour.

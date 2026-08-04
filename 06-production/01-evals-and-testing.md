@@ -1,3 +1,7 @@
+---
+title: "01 · Evals and testing"
+---
+
 # 01 · Evals and testing
 
 **What you'll learn:** how to know whether a change made things better — the discipline that separates shipping from guessing.

@@ -1,3 +1,7 @@
+---
+title: "04 · Observability"
+---
+
 # 04 · Observability
 
 **What you'll learn:** what to log so that when something breaks at 2am, you can find out why.

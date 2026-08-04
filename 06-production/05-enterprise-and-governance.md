@@ -1,3 +1,7 @@
+---
+title: "05 · Enterprise and governance"
+---
+
 # 05 · Enterprise and governance
 
 **What you'll learn:** what exists for deploying Claude across an organisation — so you know what to ask for rather than building it yourself.

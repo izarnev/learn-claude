@@ -1,3 +1,7 @@
+---
+title: "09 · MCP in Claude Code"
+---
+
 # 09 · MCP in Claude Code
 
 **What you'll learn:** how to connect Claude Code to your database, ticket system, browser and internal tools — and how to keep the context cost near zero.

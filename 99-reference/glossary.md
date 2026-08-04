@@ -1,3 +1,7 @@
+---
+title: "Glossary"
+---
+
 # Glossary
 
 Every term used in this track, defined once.

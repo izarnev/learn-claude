@@ -1,3 +1,7 @@
+---
+title: "Model cheat sheet"
+---
+
 # Model cheat sheet
 
 *As of August 2026. Verify against [the models overview](https://platform.claude.com/docs/en/about-claude/models/overview) — this changes.*

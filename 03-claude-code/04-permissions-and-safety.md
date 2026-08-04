@@ -1,3 +1,7 @@
+---
+title: "04 · Permissions, sandboxing, and safety"
+---
+
 # 04 · Permissions, sandboxing, and safety
 
 **What you'll learn:** exactly what Claude Code can and can't do, how to constrain it, and what "enforcement" means versus "instruction".

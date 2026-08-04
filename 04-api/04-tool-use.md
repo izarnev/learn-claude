@@ -1,3 +1,7 @@
+---
+title: "04 · Tool use"
+---
+
 # 04 · Tool use
 
 **What you'll learn:** the mechanic that turns Claude from a text generator into an agent, and how to design tools Claude uses correctly.

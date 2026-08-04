@@ -1,3 +1,7 @@
+---
+title: "10 · Skills in the API"
+---
+
 # 10 · Skills in the API
 
 **What you'll learn:** using Agent Skills programmatically — including the pre-built document skills that produce real Office files.

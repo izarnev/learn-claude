@@ -1,3 +1,7 @@
+---
+title: "07 · Subagents, teams, and parallelism"
+---
+
 # 07 · Subagents, teams, and parallelism
 
 **What you'll learn:** the four ways Claude Code does more than one thing at once, and how to pick between them.

@@ -1,3 +1,7 @@
+---
+title: "05 · Server tools and the MCP connector"
+---
+
 # 05 · Server tools and the MCP connector
 
 **What you'll learn:** the tools Anthropic runs for you, so you don't have to build them.

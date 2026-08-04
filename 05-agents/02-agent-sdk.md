@@ -1,3 +1,7 @@
+---
+title: "02 · The Claude Agent SDK"
+---
+
 # 02 · The Claude Agent SDK
 
 **What you'll learn:** how to use Claude Code as a library, so you don't rebuild the agentic loop yourself.

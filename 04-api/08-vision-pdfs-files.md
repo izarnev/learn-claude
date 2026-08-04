@@ -1,3 +1,7 @@
+---
+title: "08 · Vision, PDFs, and the Files API"
+---
+
 # 08 · Vision, PDFs, and the Files API
 
 **What you'll learn:** getting images and documents into the API efficiently.

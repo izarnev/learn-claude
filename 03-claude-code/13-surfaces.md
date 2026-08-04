@@ -1,3 +1,7 @@
+---
+title: "13 · Surfaces: desktop, web, IDE, Slack"
+---
+
 # 13 · Surfaces: desktop, web, IDE, Slack
 
 **What you'll learn:** where else Claude Code runs, and how to move a session between surfaces mid-task.

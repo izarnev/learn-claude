@@ -1,3 +1,7 @@
+---
+title: "API cheat sheet"
+---
+
 # API cheat sheet
 
 ---
