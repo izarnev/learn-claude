@@ -5,7 +5,21 @@ order: 5
 
 # Artifacts and file creation
 
+> **You are here** · All paths · File creation requires Pro or above · 40–50 min · Assumes [Your first real conversation](your-first-conversation.md).
+
 **What you'll learn:** the difference between an artifact and a real file, when each appears, and how to get Claude to produce genuinely useful deliverables.
+
+---
+
+## If you only read one thing
+
+Two different things get confused constantly.
+
+An **artifact** is content Claude puts in a side panel instead of the chat — a document, a chart, a working web page. It's live and editable, and it stays out of the way of the conversation.
+
+**File creation** is Claude building a real `.docx`, `.xlsx`, `.pptx` or `.pdf` that you download and open in Word or Excel. Real files, with real formulas and real formatting — not a picture of a spreadsheet.
+
+The practical lesson: ask for the deliverable you actually want, in the format you actually need, and iterate on it rather than regenerating from scratch. "Make the summary tab a pivot by region" beats asking for the whole workbook again.
 
 ---
 

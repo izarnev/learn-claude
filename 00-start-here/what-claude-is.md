@@ -5,7 +5,23 @@ order: 1
 
 # What Claude actually is
 
+> **You are here** · All paths · Free plan · 30–40 min · Assumes nothing. This is the mental model everything else builds on.
+
 **What you'll learn:** a working mental model of what's happening when you talk to Claude — enough to explain its strengths and its failure modes without hand-waving.
+
+---
+
+## If you only read one thing
+
+Claude is a program that reads everything in front of it and writes what should come next, one small piece at a time. That's it. It has no memory of you between conversations, no access to the internet, and no ability to open your files — *unless* a specific feature gives it one of those things.
+
+Three consequences follow, and they explain almost every confusing thing Claude ever does:
+
+- **It only knows what's in front of it.** Everything you've said in this conversation, plus anything you've attached. Nothing else. When Claude "forgets" something, it's almost always because the thing fell out of view, not because it changed its mind.
+- **There's a limit to how much it can see at once**, and long conversations fill it up with clutter. This is why a fresh chat often works better than arguing with a stuck one.
+- **It's confident even when it's wrong**, particularly about recent events, exact numbers, and specific quotes or links. The fix is always the same: give it the real source, or give it a tool that can check.
+
+The technical vocabulary below — tokens, context windows, statelessness — is just precise language for those three points. Learn the three points first.
 
 ---
 
@@ -21,7 +37,7 @@ Everything else in this track is a variation on that theme: **what you put in th
 
 ### Tokens
 
-Claude doesn't read characters or words. It reads **tokens** — chunks of roughly 3–4 characters in English. "Unbelievable" might be three tokens; "cat" is one. Code and non-English text tokenise less efficiently.
+Claude doesn't read characters or words. It reads **tokens** — chunks of text, roughly 3–4 characters each in English, so about ¾ of a word. "Unbelievable" might be three tokens; "cat" is one. Code and non-English text tokenise less efficiently.
 
 This matters for two practical reasons:
 
@@ -32,7 +48,7 @@ A rough conversion: 750 words ≈ 1,000 tokens. A 200-page book ≈ 100,000 toke
 
 ### The context window
 
-The context window is everything Claude can see at once: the system prompt, the conversation so far, any files you attached, any tool results, and the response it's currently writing.
+The **context window** — think of it as Claude's field of view, or how much it can hold in its head at once — is everything Claude can see: the system prompt, the conversation so far, any files you attached, any tool results, and the response it's currently writing.
 
 Current sizes (August 2026):
 
@@ -51,7 +67,7 @@ A million tokens is enormous — roughly ten novels. But it is not infinite, and
 
 ### Statelessness
 
-Each API request is independent. Claude does not remember your last conversation. When a chat interface *appears* to remember, it's because the interface is resending the transcript, or because a memory feature is explicitly retrieving and injecting past content.
+*Stateless* means "keeps no record between requests". Each request is independent. Claude does not remember your last conversation. When a chat interface *appears* to remember, it's because the interface is resending the transcript, or because a memory feature is explicitly retrieving and injecting past content.
 
 This is the single most important thing to internalise, because it explains:
 
@@ -61,16 +77,15 @@ This is the single most important thing to internalise, because it explains:
 
 ### Thinking
 
-Modern Claude models reason before answering. Two mechanisms exist:
+Modern Claude models can reason privately before answering — working through the problem in a scratchpad you don't see, then writing the response. On current models this is automatic: Claude judges how hard the question is and thinks proportionally, so a simple question still gets a fast answer.
 
-- **Adaptive thinking** (`thinking: {type: "adaptive"}`) — Claude decides on its own how much to think, calibrated by task complexity and an `effort` setting. This is the current approach, used by Claude 4.6 and later. On Fable 5 it's always on.
-- **Extended thinking** (`thinking: {type: "enabled", budget_tokens: N}`) — the older approach with a manual token budget. Deprecated; on Claude 4.7 and later, setting `budget_tokens` returns a 400 error.
+In the chat apps you'll see this as a thinking or **effort** control. Turning it up helps on maths, logic, debugging, and decisions with several competing constraints. It doesn't help on simple lookups or rewriting, and it can actually flatten creative writing.
 
-In the chat apps this surfaces as a thinking/effort toggle. In the API it's the `thinking` and `output_config.effort` parameters. The [Models, effort, and thinking](../01-foundations/models-and-modes.md) module covers when to reach for it.
+[Models, effort, and thinking](../01-foundations/models-and-modes.md) covers when to reach for it, and the exact API parameters if you need them.
 
 ### Tools
 
-By itself Claude only produces text. Every other capability — searching the web, reading a file, running code, sending a Slack message — comes from a **tool**: a function description Claude is given, which it can request to call. The surrounding software actually executes the call and hands back the result.
+By itself Claude only produces text. Every other capability — searching the web, reading a file, running code, sending a Slack message — comes from a **tool**: a capability someone has handed it, described well enough that Claude can ask for it to be used. The surrounding software actually executes the call and hands back the result.
 
 That loop — *model asks, harness executes, result goes back into context, model continues* — is called the **agentic loop**, and it is the thing that turns a chatbot into an agent. Everything in stages 03, 04 and 05 is elaboration on it.
 

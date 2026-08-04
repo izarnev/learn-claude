@@ -5,7 +5,17 @@ order: 0
 
 # How to use this track
 
+> **You are here** · All paths · Free plan · 10 min · Assumes nothing. This is the first file to read.
+
 **What you'll learn:** how to work through this material so it actually sticks.
+
+---
+
+## If you only read one thing
+
+This track is 60-odd short guides, grouped into stages. You don't do all of it — you pick one of the four paths in the [README](../README.md) and follow that. Every guide has the same shape, and every guide ends with exercises.
+
+The exercises are the point. Reading about prompting improves your prompting roughly as much as reading about swimming improves your swimming. If you're going to skip something, skip the deep explanations and keep the exercises — not the other way round.
 
 ---
 

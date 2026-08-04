@@ -5,34 +5,39 @@ order: 2
 
 # The Claude landscape
 
+> **You are here** · All paths · Free plan for the exercises · 30–40 min · Assumes [What Claude actually is](what-claude-is.md).
+
 **What you'll learn:** every place Claude exists, what each one is for, and how they relate — so you always know which door to walk through.
+
+---
+
+## If you only read one thing
+
+Claude isn't one product, it's about a dozen, and they all run on the same brain. What differs is what each one is allowed to touch.
+
+If you're not a developer, you need to know four names:
+
+- **claude.ai / the desktop app** — the chat window. Asking, writing, analysing.
+- **Projects** — a chat window that already knows your background material, so you stop re-explaining yourself.
+- **Cowork** — you hand Claude a folder and a job, walk away, and come back to finished work.
+- **Connectors** — plug-ins that let Claude see your email, calendar, Drive, Slack and so on.
+
+The rest of this module maps everything else, including the developer tools. Skim those sections; you're reading them so the names aren't strange later, not to learn them now.
 
 ---
 
 ## The map
 
-Anthropic ships Claude across four broad layers. They share the same underlying models but differ in what they can touch.
+Underneath everything is one set of models — Fable 5, Opus 5, Sonnet 5, Haiku 4.5. On top of them sit four layers of product. They all think the same; they differ in **what they're allowed to touch**.
 
-```
-                        ┌──────────────────────────┐
-                        │      Claude models       │
-                        │  Fable 5 / Opus 5 /      │
-                        │  Sonnet 5 / Haiku 4.5    │
-                        └────────────┬─────────────┘
-                                     │
-        ┌────────────────┬───────────┴──────────┬──────────────────┐
-        │                │                      │                  │
-   ┌────▼────┐     ┌─────▼──────┐      ┌────────▼───────┐   ┌──────▼──────┐
-   │  CHAT   │     │  AGENTIC   │      │  IN-APP        │   │  DEVELOPER  │
-   │         │     │  DESKTOP   │      │  INTEGRATIONS  │   │  PLATFORM   │
-   │ claude  │     │            │      │                │   │             │
-   │ .ai     │     │ Cowork     │      │ Excel, Word,   │   │ Claude API  │
-   │ mobile  │     │ Claude     │      │ PowerPoint,    │   │ Agent SDK   │
-   │ desktop │     │ Code       │      │ Outlook, M365, │   │ Managed     │
-   │ Projects│     │            │      │ Chrome, Slack, │   │ Agents      │
-   │         │     │            │      │ Xcode          │   │ Console     │
-   └─────────┘     └────────────┘      └────────────────┘   └─────────────┘
-```
+| Layer | What it is | Where it lives | What it can touch |
+|---|---|---|---|
+| **1 · Chat** | You type, Claude answers | claude.ai, desktop app, mobile app, Projects | Whatever you paste or upload, plus the web and any connectors you've enabled |
+| **2 · Agentic desktop** | You describe a job, Claude goes and does it | Cowork, Claude Code | Your files, your terminal, your browser — with your permission |
+| **3 · In-app** | Claude appears inside software you already use | Excel, Word, PowerPoint, Outlook, Microsoft 365, Chrome, Slack, Xcode | Whatever that app can see |
+| **4 · Developer platform** | You build software that calls Claude | Claude API, Agent SDK, Managed Agents, Console | Whatever you write code to give it |
+
+Most people live in layers 1 and 2 and never need 3 or 4. If you're on Path A, that's the whole map — layers 3 and 4 are there so you know they exist.
 
 And cutting across all of them, four **extension mechanisms** you'll meet repeatedly:
 

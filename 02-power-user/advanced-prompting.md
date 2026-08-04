@@ -5,7 +5,24 @@ order: 8
 
 # Advanced prompting patterns
 
+> **You are here** · Paths A, B, C, D · Free plan · 60–75 min · Assumes [Prompting fundamentals](../01-foundations/prompting-fundamentals.md) and [Structured prompting](../01-foundations/structured-prompting.md). The capstone of the no-code path.
+
 **What you'll learn:** the patterns that separate competent prompting from expert prompting — most of which are about *structuring the work*, not phrasing the request.
+
+---
+
+## If you only read one thing
+
+Everything in stage 01 was about phrasing a request well. This module is about something different and more powerful: **structuring the work** so a good answer is the likely outcome rather than a lucky one.
+
+The four patterns that carry most of the value, if you only take four:
+
+- **Make it criticise its own draft.** Ask for the work, then ask it to find the three weakest points and fix them. This is close to free and reliably improves quality.
+- **Set the rubric before the work.** Ask what "excellent" looks like for this task, agree the criteria, *then* ask for the output judged against them.
+- **Force alternatives.** "Give me three genuinely different approaches and argue against each" prevents the very common failure of committing to the first plausible idea.
+- **Demand the evidence first.** For anything based on documents, have Claude pull the relevant quotes before it reasons. This is the strongest anti-hallucination tool you have.
+
+They stack. Rubric, then draft, then self-critique against the rubric, is a small pipeline that outperforms almost any single clever prompt.
 
 ---
 

@@ -5,9 +5,25 @@ order: 2
 
 # Skills
 
+> **You are here** · Paths A, B, C · **Requires Pro or above** in practice · 60–75 min · Assumes [Projects](projects.md).
+>
+> Skills are listed as available on Free, but they only run with [code execution](https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude) enabled, which is paid-only. Free users can read this module but can't do the exercises.
+
 **What you'll learn:** what a Skill is, how progressive disclosure makes them nearly free, and how to write one that actually triggers.
 
-*Available on Free, Pro, Max, Team and Enterprise plans. Requires [code execution](https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude) to be enabled.*
+---
+
+## If you only read one thing
+
+A Project holds *what you know*. A Skill holds *how you do something*.
+
+A Skill is a set of instructions for one repeatable task — how your team writes release notes, how you want expense reports formatted, how to clean a particular export — that Claude loads only when it's relevant. The trigger for making one is simple: **you've pasted the same multi-step instructions into chat three times.**
+
+The clever part is that Skills are nearly free. Claude only reads a one-line description of each installed Skill until one actually applies, so you can install dozens without slowing anything down or crowding out your conversation.
+
+Two things determine whether a Skill works. The **description** decides whether it ever fires — it must say both what the Skill does *and* when to use it, in the words you'd actually say. The **body** decides whether the result is good — write it like a runbook for a new hire, with numbered steps and what to do when information is missing.
+
+And treat installing someone else's Skill like installing software: it can tell Claude to do things. Read it first.
 
 ---
 
@@ -199,6 +215,29 @@ Take the best template from your prompt library ([Structured prompting with XML]
 
 **Exercise 2 — Description A/B.**
 Write two descriptions for the same skill: one vague, one specific with trigger words. Install each in turn and try five naturally-phrased requests. Count how often it fired.
+
+<details>
+<summary>Worked example</summary>
+
+Say the Skill formats your weekly team update.
+
+**Version A (vague):** `Helps with team updates.`
+
+**Version B (specific):** `Format the weekly engineering team update in our house style — sections for Shipped, In progress, Blocked, and a one-line headline. Use when the user asks for a weekly update, a team update, a status post, or "what shipped this week".`
+
+**The five test requests** — say them the way you naturally would, not the way the description is worded:
+
+1. "write my weekly update"
+2. "what shipped this week — can you write that up"
+3. "I need to post a status to the team channel"
+4. "draft the eng update for Friday"
+5. "summarise the week for the team"
+
+**Scoring.** Tally how many of the five triggered the Skill on each version. Version A typically fires on one or two; version B on four or five. The gap is entirely because B contains the words you actually said.
+
+**What to notice.** Request 3 says none of "weekly", "update" or "shipped" — it says "status" and "post". B catches it because "status post" made it into the description. That's the whole technique: write down the phrasings your team really uses, including the sloppy ones, rather than the tidy name you gave the Skill.
+
+</details>
 
 **Exercise 3 — Progressive disclosure.**
 Build a skill with a bundled reference file. Ask a question that needs the file and one that doesn't. Confirm Claude only reads it when relevant.

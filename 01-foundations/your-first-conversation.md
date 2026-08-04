@@ -5,13 +5,41 @@ order: 1
 
 # Your first real conversation
 
+> **You are here** · All paths · Free plan · 45–60 min · Assumes [What Claude actually is](../00-start-here/what-claude-is.md).
+
 **What you'll learn:** how to drive a Claude conversation deliberately rather than hopefully — including the interface controls most people never touch.
+
+---
+
+## If you only read one thing
+
+Most people use Claude like a search box and get search-box results. The single change that fixes this: write the prompt you'd send a capable new colleague who knows nothing about your situation. What you want, why, who it's for, and what "good" looks like. That's forty seconds of typing and it replaces three rounds of "no, shorter."
+
+Two habits worth building immediately:
+
+- **Edit your original message instead of arguing.** Hover your message, edit it, re-run. Correcting Claude in a follow-up leaves both the wrong answer *and* your correction sitting in the conversation, and everything after that is generated against the mess.
+- **Ask it to ask you.** Adding *"before you start, ask me up to five questions that would change your answer"* to any vague request is the highest-return sentence in this entire track.
 
 ---
 
 ## The interface, control by control
 
 Open [claude.ai](https://claude.ai) or the desktop app. Here's what each thing does and when it matters.
+
+**Find these before you read on.** Open Claude in another window and locate each one — this takes two minutes and makes the rest of the module concrete rather than abstract. Positions shift as the app changes; if something isn't where this says, look nearby rather than assuming it's gone.
+
+| Control | Where to look | What it looks like |
+|---|---|---|
+| Message box | Bottom centre | The big text field you type into |
+| Model picker | In or just above the message box | The current model's name — "Sonnet", "Opus" — as a small dropdown |
+| Effort / thinking toggle | Same dropdown as the model picker, or Settings | A slider or list: low / medium / high |
+| Attachment button | Left end of the message box | A paperclip or `+` |
+| Search and Research | The `+` or tools menu by the message box | Toggles labelled "Web search" and "Research" |
+| Edit a message | Hover over a message **you** sent | A pencil icon appears at its edge |
+| Retry | Hover under a message **Claude** sent | A circular-arrow icon |
+| Settings | Your name or avatar, bottom-left | Standard settings menu |
+
+If you can't find one, the fastest route is to ask Claude itself: *"Where is the model picker in the app I'm using right now?"*
 
 ### The message box
 
@@ -139,6 +167,29 @@ Ask Claude for a 500-word blog intro on a topic you know. When it's not right, r
 
 **Exercise 3 — The question-first pattern.**
 Pick something genuinely underspecified from your real work ("help me plan the offsite", "review my pricing page"). Send it with: *"Before answering, ask me up to five questions that would materially change your response."* Answer them. Compare against what you'd have got without.
+
+<details>
+<summary>Worked example — if you're not sure what to use</summary>
+
+**Send this:**
+
+> Help me plan a team offsite.
+>
+> Before answering, ask me up to five questions that would materially change your response.
+
+**Claude comes back with something like:**
+
+> 1. How many people, and are they all in one location currently?
+> 2. What's the primary goal — strategy, relationship-building, or a specific decision that needs making?
+> 3. How long: half a day, a full day, or multiple days?
+> 4. What's the budget range, and does it need to cover travel?
+> 5. Has the team done one before, and if so what went badly?
+
+**What to notice.** Question 5 is the one you wouldn't have thought to include, and it's the one that changes the plan most. That's the entire value of this pattern: it surfaces the constraint you were carrying implicitly. Answer all five and the plan you get back will be usable rather than generic.
+
+Compare: send "help me plan a team offsite" cold, in a fresh chat, and you'll get a plausible agenda for a team that isn't yours.
+
+</details>
 
 **Exercise 4 — Format control.**
 Ask the same question five ways: as a table, as prose, as a checklist, as a decision tree, as a one-line answer. Save the phrasings that worked into your prompt journal.

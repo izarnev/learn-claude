@@ -5,7 +5,21 @@ order: 7
 
 # Memory and personalisation
 
+> **You are here** · All paths · Free plan for settings; memory features vary by plan · 40–50 min · Assumes [What Claude actually is](../00-start-here/what-claude-is.md).
+
 **What you'll learn:** how Claude carries context across conversations, how to control it, and how to make Claude sound like you rather than like a press release.
+
+---
+
+## If you only read one thing
+
+By default Claude starts every conversation knowing nothing about you. Two features change that.
+
+**Custom instructions** are standing preferences applied to every chat — who you are, how you like things written, what to never do. Set once, applies forever. This is the higher-value of the two and almost nobody bothers.
+
+**Memory** lets Claude carry things it learned about you between conversations. You can view it, edit it, turn it off, and use incognito chats that don't persist at all.
+
+If you want Claude to write like you rather than like a press release, describing your voice barely works — give it two or three samples of your actual writing instead. That's a bigger jump in quality than any adjective you could pick.
 
 ---
 

@@ -5,7 +5,21 @@ order: 6
 
 # Web search and Research
 
+> **You are here** · All paths · Free plan has limited search; Research needs Pro · 40–50 min · Assumes [Prompting fundamentals](prompting-fundamentals.md).
+
 **What you'll learn:** when to use plain search vs. Research mode, and how to get output you can actually trust.
+
+---
+
+## If you only read one thing
+
+Claude's built-in knowledge stops at a fixed date. For anything current, it has to look things up, and there are two ways it does that.
+
+**Web search** is a handful of quick lookups with citations — right for a fact, a price, a recent announcement.
+
+**Research** is a different animal: Claude plans an investigation, runs many searches, follows leads, and writes you a sourced report. It takes minutes rather than seconds. Right for "what's the landscape here", not "what's the capital of Peru".
+
+The discipline that matters in both: **click the citations.** A confident summary attached to a source that doesn't say that is the most common way people get burned. Spot-check two or three links on anything you're going to act on.
 
 ---
 

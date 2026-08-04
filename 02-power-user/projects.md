@@ -5,7 +5,19 @@ order: 1
 
 # Projects
 
+> **You are here** · Paths A, B, C · **Requires Pro or above** · 45–60 min · Assumes stage 01.
+
 **What you'll learn:** how to use Projects to stop re-explaining yourself, and how project knowledge actually gets retrieved.
+
+---
+
+## If you only read one thing
+
+A Project is a chat window that already knows your background. You put reference material in it once — style guides, product docs, past examples — plus standing instructions about who you are and how you want things done. Every conversation you start inside that Project gets all of it automatically.
+
+The signal that you need one: you're pasting the same background into chat repeatedly.
+
+One thing worth understanding. Below a certain size, everything in the Project is handed to Claude every time. Above it, Claude searches the material and pulls out the relevant parts instead. That's normally invisible, but it's why a huge, badly-organised knowledge base performs worse than a small curated one — so put in the ten documents that matter, not the hundred that exist.
 
 *Requires a paid plan.*
 
@@ -76,7 +88,7 @@ Notice everything is *verifiable*. "Be helpful" isn't an instruction; "never sug
 
 ---
 
-## The knowledge base and RAG
+## The knowledge base, and how Claude finds things in it
 
 Project knowledge doesn't all sit in the context window. Above a certain size, Claude uses **retrieval-augmented generation (RAG)**: your files are indexed, and for each message Claude retrieves the relevant chunks and puts *those* in context.
 

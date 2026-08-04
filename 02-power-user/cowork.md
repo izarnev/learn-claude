@@ -5,9 +5,23 @@ order: 4
 
 # Cowork
 
+> **You are here** · Paths A, B, C · **Requires Pro or above** · 60–75 min · Assumes [Skills](skills.md) and [Connectors](connectors-and-mcp.md). This is the flagship non-developer module.
+
 **What you'll learn:** how to hand Claude a multi-step job and get finished work back — including the permission modes that decide how much you're in the loop.
 
-*Requires a paid plan: Pro, Max, Team, or Enterprise.*
+---
+
+## If you only read one thing
+
+Cowork is where you stop having a conversation and start handing over a job. You point Claude at a folder, describe the outcome you want, and it works through the whole thing — reading files, running calculations, building the deliverable — while you do something else.
+
+The two things that determine whether it goes well:
+
+**Write a brief, not a prompt.** Say what the finished thing should be, where the inputs are, where the output goes, what Claude must not touch, and when it should stop and ask you. Every clause you add prevents a specific way it could go wrong.
+
+**Pick the right permission mode.** *Manual* asks you before each action — use it for anything involving money, messages sent as you, or files you can't replace. *Auto* keeps working but safety-checks every action before taking it, and is the right default for most work. *Skip* does neither, and should be rare. Claude always asks before permanently deleting anything, in every mode.
+
+One expectation to set: Cowork uses far more of your plan allowance than chatting does. Use it for jobs, not questions.
 
 ---
 
@@ -183,6 +197,39 @@ Point Cowork at a genuinely messy folder. Ask it to organise by type and date. R
 
 **Exercise 2 — The brief.**
 Write a Cowork task twice: once as a one-liner, once with all five brief components. Run both. The difference is the whole lesson of this module.
+
+<details>
+<summary>Worked example — with a checklist you can reuse</summary>
+
+**The one-liner:**
+
+> Sort out my receipts folder and make me an expense report.
+
+This will produce *something*. It will also guess at the currency handling, invent a column layout, possibly rename your files, and not tell you which receipts it couldn't read.
+
+**The brief.** Same job, with the five components labelled so you can see the pattern:
+
+> **[outcome]** Produce a formatted expense report as a single spreadsheet.
+>
+> **[inputs]** The ~80 receipt images and PDFs in `~/Documents/receipts-2026-q2`.
+>
+> **[output]** `expense-report-q2.xlsx` in that same folder. Columns: Date, Vendor, Category, Amount (EUR), Currency (original), Receipt filename. Add a summary tab with totals by category.
+>
+> **[constraints]** Do not move, rename or delete any original file. Convert non-EUR amounts using the rate on the receipt date; if no rate is available, leave the cell blank and flag the row.
+>
+> **[definition of done]** Every receipt appears as a row, flagged rows are visibly marked, and the summary tab totals match the detail tab.
+
+**Your reusable checklist.** Before starting any Cowork task, answer these five in one line each:
+
+1. What is the finished thing?
+2. Where is the raw material?
+3. Where does the result go, and in what format?
+4. What must Claude not do, and what should it ask about?
+5. How will I know it worked?
+
+**What to notice.** Component 4 is the one people skip and the one that saves them. "Do not rename the originals" and "flag rather than guess" are each preventing a specific, likely failure. Component 5 is what lets you check the output in thirty seconds instead of re-reading eighty receipts.
+
+</details>
 
 **Exercise 3 — Mode comparison.**
 Run a moderate task in Manual, then the same class of task in Auto. Note the speed difference and how much you actually wanted to be asked.

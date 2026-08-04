@@ -5,7 +5,23 @@ order: 6
 
 # Automation: scheduled tasks and routines
 
+> **You are here** · Paths A, B, C · **Requires Pro or above** · 45–60 min · Assumes [Cowork](cowork.md).
+
 **What you'll learn:** how to make Claude do work on a schedule, and how to tell the difference between the several scheduling mechanisms.
+
+---
+
+## If you only read one thing
+
+Claude can run work on a schedule without you being there — a Monday morning digest, a daily check on something that changes, a weekly report assembled from your connected apps.
+
+What works on a schedule is anything where the *input* changes but the *procedure* doesn't. What fails is anything needing judgment about whether it should run at all.
+
+The three ways scheduled automation rots, all of which you can design out up front:
+
+- **It fails silently.** It stopped working in March and you noticed in June. Make it report even when there's nothing to report, so silence means something is broken.
+- **It drifts.** The source changed shape and the output is now subtly wrong rather than obviously broken. Re-read the output properly once a month.
+- **You stop reading it.** A daily message you ignore is worse than nothing. If you're skimming past it, make it less frequent or make it only speak when something's actually changed.
 
 ---
 

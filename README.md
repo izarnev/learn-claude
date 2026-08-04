@@ -12,13 +12,17 @@ A complete, step-by-step learning track for Claude — from "I've never typed a 
 
 ## How this track is organised
 
-Eight numbered folders. Each folder is a **stage**. Each file inside is a **module** with the same shape:
+Eight stages, numbered `00` to `07`, plus a `99-reference` folder you dip into rather than work through. Each file inside a stage is a **module**, and every module has the same shape:
 
-1. **What you'll learn** — the outcome, in one line
-2. **Concepts** — the actual guide
-3. **Try it** — hands-on exercises you can do immediately
-4. **Checkpoint** — how you know you've got it
-5. **Going deeper** — links to the official docs for the details this guide compresses
+1. **You are here** — which path it's on, what plan it needs, how long it takes, what it assumes
+2. **What you'll learn** — the outcome, in one line
+3. **If you only read one thing** — the whole module in plain language, no jargon. Enough to be useful on its own.
+4. **The rest of the module** — the actual guide, in depth
+5. **Try it** — hands-on exercises you can do immediately, several with worked answers
+6. **Checkpoint** — how you know you've got it
+7. **Going deeper** — links to the official docs for the details this guide compresses
+
+If you're new and something in **The details** loses you, the honest advice is to read the summary box, do the exercises, and come back. The box is not a teaser — it's the load-bearing part.
 
 Modules are numbered in the order you should do them. Nothing later assumes anything you haven't already read.
 
@@ -41,17 +45,19 @@ learn-claude/
 
 You do not have to do all of it. Pick the path that matches where you're going.
 
-### Path A — "I just want to use Claude really well" (~6 hours)
+Time estimates below assume you actually do the exercises. Reading only, halve them. They are per-module ranges added up, not a promise — go at whatever pace makes it stick.
+
+### Path A — "I just want to use Claude really well" (12–16 hours)
 
 `00-start-here` → `01-foundations` → `02-power-user` → capstone 1 & 2
 
-You'll never touch code. You'll end up better at Claude than most engineers.
+You'll never touch code. You'll end up better at Claude than most engineers. Spread across two or three weeks is more effective than one weekend.
 
-### Path B — "I want to code with Claude" (~15 hours)
+### Path B — "I want to code with Claude" (+12–18 hours on top of Path A)
 
 Path A → `03-claude-code` → capstone 3
 
-### Path C — "I want to build products on Claude" (~30 hours)
+### Path C — "I want to build products on Claude" (40–60 hours)
 
 Path A (skim) → `03-claude-code` → `04-api` → `05-agents` → `06-production` → capstones 4 & 5
 
@@ -120,6 +126,7 @@ Path A (skim) → `03-claude-code` → `04-api` → `05-agents` → `06-producti
 
 | # | Module |
 |---|--------|
+| 00 | [API pricing and rate limits](04-api/pricing-and-rate-limits.md) |
 | 01 | [Setup and your first API call](04-api/setup-and-first-call.md) |
 | 02 | [The Messages API in depth](04-api/messages-api.md) |
 | 03 | [Thinking and effort](04-api/thinking-and-effort.md) |

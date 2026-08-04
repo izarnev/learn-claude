@@ -5,7 +5,24 @@ order: 3
 
 # Models, effort, and thinking
 
+> **You are here** · All paths · Free plan covers the basics; model switching needs Pro · 45–60 min · Assumes [What Claude actually is](../00-start-here/what-claude-is.md). **Non-technical readers:** read the summary and "Choosing a model", then stop — the rest is API syntax.
+
 **What you'll learn:** which Claude model to use for what, and how the effort and thinking controls change behaviour.
+
+---
+
+## If you only read one thing
+
+There are four Claude models and they trade intelligence against speed and cost.
+
+- **Sonnet** is the default and handles the overwhelming majority of real work. Start here.
+- **Opus** for genuinely hard thinking: complex analysis, tricky code, decisions where being wrong is expensive.
+- **Fable** for the very hardest work, where you'll accept it being slow.
+- **Haiku** when you want an answer instantly and the task is simple.
+
+The rule is to default to Sonnet and only move up when you have an actual reason, not a feeling.
+
+Separately, there's a **thinking** or **effort** control. Turned up, Claude reasons privately for longer before answering — better on maths, logic, debugging and anything with several competing constraints; slower and no better on simple requests. Notably it does *not* make creative writing better; it tends to flatten the voice.
 
 ---
 
@@ -70,7 +87,7 @@ Sonnet     →  draft the reply
 Opus       →  handle only the tickets Haiku flagged as complex
 ```
 
-That's ~5× cheaper than running everything on Sonnet, with better outcomes on the hard cases.
+How much this saves depends entirely on the split. Haiku is 3× cheaper than Sonnet, so that's your ceiling on the classification step — and routing the hard cases up to Opus (5× *more* than Sonnet) spends some of it back. The realistic win on a pipeline like this is 30–50%, not an order of magnitude. Work it out for your own volumes rather than trusting a rule of thumb; the routing usually justifies itself on *quality* — Opus on the cases that need it — more than on cost.
 
 ---
 

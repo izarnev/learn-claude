@@ -5,7 +5,21 @@ order: 4
 
 # Files, images, and vision
 
+> **You are here** · All paths · Free plan (some limits) · 40–50 min · Assumes [Prompting fundamentals](prompting-fundamentals.md).
+
 **What you'll learn:** how to get material into Claude effectively, and how to work with images and PDFs without wasting context or getting hallucinated readings.
+
+---
+
+## If you only read one thing
+
+You can hand Claude PDFs, images, screenshots, spreadsheets and code, by dragging, pasting, or using the attachment button. It reads them properly — including the visual layout of a PDF, not just the text.
+
+Three things will save you most of the trouble people have here:
+
+- **Ask for the evidence, not just the answer.** "Quote the passages you based this on" turns an answer you have to trust into one you can check in ten seconds.
+- **Label multiple documents** when you upload several, so Claude can tell you which one a claim came from.
+- **Verify anything that matters.** Numbers pulled from a dense table, and text from a poor scan, are exactly where mistakes happen. For images, cropping to the relevant region before uploading noticeably improves accuracy.
 
 ---
 

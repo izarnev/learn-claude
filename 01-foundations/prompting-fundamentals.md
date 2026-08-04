@@ -5,7 +5,26 @@ order: 2
 
 # Prompting fundamentals
 
+> **You are here** · All paths · Free plan · 60–75 min · Assumes [Your first real conversation](your-first-conversation.md). The most important module in stage 01.
+
 **What you'll learn:** the six techniques that account for most of the quality difference between good and bad prompts — straight from Anthropic's own prompt engineering guidance.
+
+---
+
+## If you only read one thing
+
+Anthropic's own test for a prompt: show it to a colleague who doesn't know the task. If they'd be confused, so is Claude. Everything below is a technique for removing confusion.
+
+The six that matter, in order of how much they'll change your results:
+
+1. **Be specific** about what you want and what format it should be in.
+2. **Say why.** "Never use ellipses *because this will be read aloud by a text-to-speech engine*" works better than the rule alone, because Claude can then handle cases you didn't think of.
+3. **Show examples.** Three to five. When you can't describe what you want, demonstrate it.
+4. **Label the parts of your prompt** so instructions, background and data don't blur together.
+5. **Give it a role.** One sentence — "you are a security engineer reviewing this for a bank" — measurably shifts what it notices.
+6. **Long documents go at the top, your question at the bottom.** Anthropic measured up to 30% better answers from this alone.
+
+One counterintuitive rule: tell Claude what to do, not what to avoid. "Write in flowing paragraphs" works; "don't use bullet points" only half-works.
 
 ---
 
@@ -189,11 +208,75 @@ I explicitly ask for a list. Incorporate items naturally into sentences instead.
 **Exercise 1 — Vague then specific.**
 Take a real task. Write the laziest possible prompt. Send it. Then rewrite using techniques 1, 2 and 5. Put both outputs side by side. Keep the rewrite in your journal.
 
+<details>
+<summary>Worked example</summary>
+
+**Lazy version:**
+
+> write something about our new returns policy
+
+You'll get a generic paragraph that could belong to any company, hedged in several directions because Claude doesn't know who's reading it.
+
+**Rewritten with role (technique 5), specificity (1), and reasons (2):**
+
+> You're writing customer-facing help centre copy for an online clothing retailer.
+>
+> Explain our new returns policy: 30 days instead of 14, free returns for members, £3.95 deducted for non-members, and items must be unworn with tags on.
+>
+> The audience is a customer who has just been told they can't return something, so they're already annoyed. Lead with what they *can* do, not with the rules. Don't apologise more than once — it reads as insincere and makes people angrier.
+>
+> Under 150 words, plain paragraphs, no bullet points.
+
+**What to notice.** The rewrite isn't longer because it's more formal — it's longer because it contains four things Claude could not have guessed: the actual policy, who's reading, their emotional state, and a specific failure mode to avoid. That last clause ("don't apologise more than once — it reads as insincere") is technique 2 doing its work, and it's why the output will avoid a whole family of mistakes you didn't enumerate.
+
+</details>
+
 **Exercise 2 — Motivation over prohibition.**
 Write an instruction as a rule (`never do X`). Then rewrite it as a reason (`because Y, never do X`). Test both on three inputs where the rule's *spirit* applies but the literal rule doesn't. Watch the second version generalise.
 
 **Exercise 3 — Build a few-shot classifier.**
 Pick a classification task from your work. Write four `<example>` pairs. Test on ten fresh inputs. Then remove the examples and test again on the same ten. Count the difference.
+
+<details>
+<summary>Worked example — with a ready-made task and a way to score it</summary>
+
+No classification task of your own? Use this one: sorting incoming messages into `urgent` / `this week` / `no action needed`.
+
+**Step 1 — write the examples.**
+
+```xml
+<examples>
+<example>
+  <input>Hi — the invoice you sent has last month's dates on it. No rush, just flagging.</input>
+  <output>this week</output>
+</example>
+<example>
+  <input>We're live and the checkout page is returning a 500 for everyone.</input>
+  <output>urgent</output>
+</example>
+<example>
+  <input>Thanks, received — will look at this when I'm back from leave on the 14th.</input>
+  <output>no action needed</output>
+</example>
+<example>
+  <input>Legal need the signed copy before Friday's board meeting or we can't file.</input>
+  <output>urgent</output>
+</example>
+</examples>
+
+Classify this message in the same format, output only the label:
+<input>{{MESSAGE}}</input>
+```
+
+**Step 2 — test on ten real messages** from your inbox. Write down each label.
+
+**Step 3 — delete the `<examples>` block** and run the same ten with only the instruction "classify this message as urgent, this week, or no action needed."
+
+**How to score it.** Before you look at either result, decide yourself what the correct label is for each of the ten. Then count matches. You're looking for two things: how many labels changed, and — more revealing — whether the no-examples version stayed consistent in its *format*. It'll often start explaining its reasoning, or invent a fourth category like "medium priority". Format drift is usually a bigger cost than accuracy drift, because it breaks anything downstream.
+
+**What to notice.** Example 1 is doing quiet work: it teaches that "no rush, just flagging" means *this week* rather than *no action needed*. That distinction is your judgment, and there's no way to state it in a rule as cleanly as showing it.
+
+</details>
 
 **Exercise 4 — Long-doc grounding.**
 Take a 20+ page PDF. Ask a specific factual question two ways: directly, and with the quote-extraction pattern. Verify both answers against the source. Note which one you'd trust.

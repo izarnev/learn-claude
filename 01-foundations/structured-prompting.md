@@ -5,7 +5,29 @@ order: 8
 
 # Structured prompting with XML
 
+> **You are here** · Paths A (optional), B, C, D · Free plan · 45–60 min · Assumes [Prompting fundamentals](prompting-fundamentals.md). **Non-technical readers:** this one looks like code but isn't — it's just labelled sections. Worth doing.
+
 **What you'll learn:** how to build reliable, reusable prompt templates using XML structure — the bridge between casual chat and production prompting.
+
+---
+
+## If you only read one thing
+
+When a prompt contains several kinds of thing at once — your instructions, some background, an example, and the actual data — Claude can misread which is which. The fix is to label each part with tags, like this:
+
+```
+<instructions>
+Rewrite the draft for a non-technical audience. Keep every fact.
+</instructions>
+
+<draft>
+...the actual draft goes here...
+</draft>
+```
+
+That's the entire idea. It isn't programming; it's putting headings on the parts of your prompt. It matters because it turns a one-off prompt into a **template** you can reuse by swapping out the contents of one tag — and reusable templates are what eventually become Skills in stage 02.
+
+You can also use it on the way out: "put your reasoning in `<thinking>` tags and the final answer in `<answer>` tags" keeps the working separate from the result.
 
 ---
 

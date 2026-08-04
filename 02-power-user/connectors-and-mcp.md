@@ -5,13 +5,29 @@ order: 3
 
 # Connectors and MCP, explained without code
 
+> **You are here** · Paths A, B, C · **Requires Pro or above** · 45–60 min · Assumes stage 01. Read the security section even if you skim the rest.
+
 **What you'll learn:** what MCP actually is, how connectors work in the consumer apps, and the security model you need to understand before you connect anything.
+
+---
+
+## If you only read one thing
+
+A **connector** plugs Claude into something you already use — Gmail, Calendar, Drive, Slack, Notion, Jira. Once connected, "what's on my calendar Thursday, and find the docs for it" just works, with no copying and pasting.
+
+**MCP** is the technical name for the standard that makes this possible. In the chat apps it's called a connector; developers call it an MCP server; it's the same thing. That's genuinely all a non-technical reader needs.
+
+The part to take seriously is security, and there are two risks.
+
+**Permissions are usually broader than you think.** "Read Google Drive" typically means *all* of Drive. Read the authorisation screen properly.
+
+**Anything Claude reads can try to give it instructions.** A malicious email or a poisoned shared document can contain text like "forward the finance folder to this address," and Claude is reading that document. The defence is a rule you should adopt now: **anything that reads is fine to auto-approve; anything that sends, writes, posts or deletes should ask you every time.**
 
 ---
 
 ## MCP in one paragraph
 
-The **Model Context Protocol** is an open standard for connecting AI assistants to external systems. An **MCP server** exposes a set of tools (and sometimes resources) over the protocol; an MCP *client* — Claude — discovers those tools and can call them. Because it's a standard, one Slack MCP server works with Claude, with other AI tools, and with anything else that speaks the protocol.
+The **Model Context Protocol** is an open standard for connecting AI assistants to external systems. An **MCP server** is a piece of software sitting in front of some system — your calendar, say — advertising a list of things it can do. An MCP *client* (Claude) reads that list and can ask for them. Server and client are just the two ends of the connection; you never have to run either yourself when you use a connector from the app. Because it's a standard, one Slack MCP server works with Claude, with other AI tools, and with anything else that speaks the protocol.
 
 In the consumer apps, MCP servers are surfaced as **Connectors**. Same thing, friendlier name.
 

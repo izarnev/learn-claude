@@ -5,7 +5,19 @@ order: 5
 
 # Claude inside your apps
 
+> **You are here** · Paths A, B, C · Availability varies by plan and app · 30–40 min · Assumes [The Claude landscape](../00-start-here/the-claude-landscape.md).
+
 **What you'll learn:** every place Claude shows up outside claude.ai, and which one to reach for.
+
+---
+
+## If you only read one thing
+
+Rather than bringing your work to Claude, these bring Claude to your work: inside Excel, Word, PowerPoint and Outlook; inside Chrome as a browsing assistant that can click and fill forms; inside Slack, where you can mention it in a channel.
+
+The rule for choosing is boring and reliable: **use the one closest to where the data already lives.** If the numbers are in a spreadsheet, use Claude for Excel rather than uploading the file to chat. If the task is on a website you visit repeatedly, use Chrome. If neither applies, the chat window is fine.
+
+Skim this module. It's a menu, not a lesson — you're reading it so you remember these exist the day you need one.
 
 ---
 

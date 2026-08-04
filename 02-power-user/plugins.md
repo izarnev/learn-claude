@@ -5,7 +5,19 @@ order: 7
 
 # Plugins
 
+> **You are here** · Paths A, B, C · **Requires Pro or above** · 25–35 min · Assumes [Skills](skills.md) and [Connectors](connectors-and-mcp.md).
+
 **What you'll learn:** what a plugin bundles, where to find good ones, and when to build your own.
+
+---
+
+## If you only read one thing
+
+A plugin is a bundle — several Skills, connectors and helpers packaged together for a particular role or tool, installed in one click instead of assembled by hand. If Skills are single recipes, a plugin is the cookbook.
+
+You'll mostly consume them rather than build them: browse the directory, install one matching your work, see what it gives you. Building your own only makes sense once you have several Skills you want to distribute to other people as a set.
+
+Same security rule as Skills, more so, because there's more inside: a plugin can give Claude instructions and access. Install ones from sources you'd trust with software.
 
 ---
 
