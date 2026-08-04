@@ -166,6 +166,36 @@ a:hover{ text-decoration-thickness:2px; }
    block reads clearly enough with the accent border above; no extra markup
    needed since the source files use plain Markdown throughout. */
 
+.page-nav{
+  display:flex; justify-content:space-between; gap:1rem;
+  margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--rule);
+}
+.page-nav-spacer{ flex:1; }
+.page-nav-link{
+  display:flex; flex-direction:column; gap:.3rem; max-width:46%;
+  padding:.8rem 1rem; border:1px solid var(--rule); text-decoration:none;
+}
+.page-nav-link:hover{ border-color:var(--accent); }
+.page-nav-label{
+  font-family:var(--font-mono); font-size:.68rem; text-transform:uppercase;
+  letter-spacing:.08em; color:var(--ink-soft);
+}
+.page-nav-title{ font-family:var(--font-head); font-weight:700; color:var(--ink); }
+.page-nav-link:hover .page-nav-title{ color:var(--accent); }
+.page-nav-prev{ text-align:left; }
+.page-nav-prev .page-nav-title::before{ content:"← "; }
+.page-nav-next{ text-align:right; margin-left:auto; align-items:flex-end; }
+.page-nav-next .page-nav-title::after{ content:" →"; }
+
+@media (max-width:640px){
+  .page-nav{ flex-direction:column; }
+  .page-nav-link, .page-nav-spacer{ max-width:none; }
+  .page-nav-spacer{ display:none; }
+  .page-nav-next{ text-align:left; align-items:flex-start; margin-left:0; }
+  .page-nav-next .page-nav-title::after{ content:""; }
+  .page-nav-next .page-nav-title::before{ content:"→ "; }
+}
+
 .page-footer{
   margin-top:3rem; padding-top:1.3rem; border-top:1px solid var(--rule);
   font-size:.82rem; color:var(--ink-soft);

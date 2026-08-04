@@ -13,6 +13,16 @@
 {% assign current_index = 0 %}
 {% assign current_count = 0 %}
 
+{% comment %}
+  Flattened prev/next across the 7 linear stages (00-start-here..06-production).
+  07-capstones and 99-reference are deliberately excluded — they're reference
+  material and standalone projects, not something read in sequence.
+{% endcomment %}
+{% assign prev_page = nil %}
+{% assign next_page = nil %}
+{% assign found_current = false %}
+{% assign last_seen = nil %}
+
 <header class="topbar">
   <button id="nav-toggle" class="nav-toggle" type="button" aria-expanded="false" aria-controls="sidebar">
     <span class="nav-toggle-bars" aria-hidden="true"></span>
@@ -41,6 +51,15 @@
             {% assign current_index = forloop.index %}
             {% assign current_count = stage_pages.size %}
           {% endif %}
+          {% if forloop.parentloop.index0 < 7 %}
+            {% if is_current %}
+              {% assign prev_page = last_seen %}
+              {% assign found_current = true %}
+            {% elsif found_current and next_page == nil %}
+              {% assign next_page = item %}
+            {% endif %}
+            {% assign last_seen = item %}
+          {% endif %}
           <li><a href="{{ item.url | relative_url }}"{% if is_current %} class="current" aria-current="page"{% endif %}>{{ item.title | default: item.name }}</a></li>
         {% endfor %}
       </ul>
@@ -54,6 +73,26 @@
   <div class="eyebrow">{{ current_stage }} · module {{ current_index }} of {{ current_count }}</div>
   {% endif %}
   {{ content }}
+
+  {% if prev_page or next_page %}
+  <nav class="page-nav" aria-label="Module navigation">
+    {% if prev_page %}
+      <a class="page-nav-link page-nav-prev" href="{{ prev_page.url | relative_url }}">
+        <span class="page-nav-label">Previous</span>
+        <span class="page-nav-title">{{ prev_page.title | default: prev_page.name }}</span>
+      </a>
+    {% else %}
+      <span class="page-nav-spacer"></span>
+    {% endif %}
+    {% if next_page %}
+      <a class="page-nav-link page-nav-next" href="{{ next_page.url | relative_url }}">
+        <span class="page-nav-label">Next</span>
+        <span class="page-nav-title">{{ next_page.title | default: next_page.name }}</span>
+      </a>
+    {% endif %}
+  </nav>
+  {% endif %}
+
   {% if site.github_repo %}
   <footer class="page-footer">
     <a href="https://github.com/{{ site.github_repo }}" class="edit-link">View source on GitHub</a>
