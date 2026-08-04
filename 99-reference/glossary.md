@@ -1,5 +1,6 @@
 ---
 title: "Glossary"
+order: 1
 ---
 
 # Glossary

@@ -1,5 +1,6 @@
 ---
 title: "Capstone projects"
+order: 1
 ---
 
 # Capstone projects

@@ -1,5 +1,6 @@
 ---
 title: "Model cheat sheet"
+order: 2
 ---
 
 # Model cheat sheet
