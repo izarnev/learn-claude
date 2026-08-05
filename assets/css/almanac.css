@@ -217,6 +217,58 @@ a:hover{ text-decoration-thickness:2px; }
 }
 .theme-toggle:hover{ border-color:var(--accent); }
 
+/* ---------------------------- search ---------------------------- */
+.search-toggle{
+  flex:none; display:flex; align-items:center; justify-content:center; font:inherit;
+  font-size:1.1rem; line-height:1; background:var(--bg-panel); border:1px solid var(--rule);
+  color:var(--ink); width:2.2rem; height:2.2rem; cursor:pointer;
+}
+.search-toggle:hover{ border-color:var(--accent); }
+
+body.search-open{ overflow:hidden; }
+
+.search-overlay{
+  position:fixed; inset:0; z-index:80; background:rgba(20, 15, 8, .4);
+  justify-content:center; align-items:flex-start; padding:10vh 1rem 1rem;
+}
+.search-overlay:not([hidden]){ display:flex; }
+.search-dialog{
+  width:min(560px, 100%); max-height:70vh; display:flex; flex-direction:column;
+  background:var(--bg); border:1px solid var(--rule); box-shadow:0 8px 30px rgba(0,0,0,.25);
+}
+.search-field{
+  flex:none; display:flex; align-items:center; gap:.6rem; padding:.7rem .9rem;
+  border-bottom:1px solid var(--rule);
+}
+.search-field-icon{ color:var(--ink-soft); font-size:1rem; }
+.search-input{
+  flex:1; min-width:0; font:inherit; font-size:.95rem; background:none; border:none;
+  color:var(--ink); padding:.2rem 0;
+}
+.search-input::placeholder{ color:var(--ink-soft); }
+.search-close{
+  flex:none; background:none; border:none; color:var(--ink-soft); font-size:.9rem;
+  width:1.8rem; height:1.8rem; cursor:pointer;
+}
+.search-close:hover{ color:var(--ink); }
+
+.search-results{
+  list-style:none; margin:0; padding:.4rem; overflow-y:auto;
+}
+.search-result{
+  display:block; padding:.55rem .6rem; text-decoration:none; color:var(--ink);
+  border-left:2px solid transparent;
+}
+.search-result:hover, .search-result.is-active, .search-result:focus-visible{
+  background:var(--bg-panel); border-left-color:var(--accent); outline:none;
+}
+.search-result-heading{
+  display:block; font-family:var(--font-head); font-weight:700; font-size:.85rem;
+}
+.search-result-snippet{
+  display:block; font-size:.8rem; color:var(--ink-soft); margin-top:.2rem; line-height:1.45;
+}
+
 /* ---------------------------- syntax highlighting (rouge) ---------------------------- */
 .highlight .c, .highlight .c1, .highlight .cm{ color:var(--ink-soft); font-style:italic; }
 .highlight .k, .highlight .kd, .highlight .kn{ color:var(--accent); font-weight:600; }
