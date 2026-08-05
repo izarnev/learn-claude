@@ -43,6 +43,13 @@ a:hover{ text-decoration-thickness:2px; }
   clip:rect(0,0,0,0); white-space:nowrap; border:0;
 }
 
+.skip-link:focus{
+  position:fixed; top:0.5rem; left:0.5rem; width:auto; height:auto; margin:0;
+  padding:0.5em 1em; overflow:visible; clip:auto; white-space:normal;
+  display:inline-block; z-index:100; background:var(--bg-panel); color:var(--ink);
+  border-radius:4px; box-shadow:0 2px 8px rgba(0,0,0,0.2);
+}
+
 /* ---------------------------- top bar ---------------------------- */
 .topbar{
   position:fixed; top:0; left:0; right:0; height:var(--topbar-h); z-index:60;
