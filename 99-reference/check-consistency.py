@@ -114,6 +114,19 @@ for path in sorted(glob.glob("0[0-7]-*/*.md")):
         warn(f"{path}: exists but isn't in the README index")
 
 
+# --- 7. No stray http:// links in markdown content ----------------------------
+# localhost/example placeholders in config samples are fine; real links must be https.
+NON_URL_HOSTS = ("localhost", "127.0.0.1", "0.0.0.0", "example.com")
+for path in files:
+    for lineno, line in enumerate(open(path), start=1):
+        for m in re.finditer(r"http://[^\s\"'\)\]]+", line):
+            url = m.group(0)
+            host = url[len("http://"):].split("/")[0].split(":")[0]
+            if host in NON_URL_HOSTS:
+                continue
+            fail(f"{path}:{lineno}: insecure http:// link -> {url}")
+
+
 # --- Report -------------------------------------------------------------------
 for w in warnings:
     print(f"WARN  {w}")

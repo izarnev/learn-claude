@@ -324,7 +324,7 @@ When verification needs to inspect files or run commands, use `type: "agent"` â€
     "PostToolUse": [{
       "hooks": [{
         "type": "http",
-        "url": "http://localhost:8080/hooks/tool-use",
+        "url": "https://localhost:8080/hooks/tool-use",
         "headers": { "Authorization": "Bearer $MY_TOKEN" },
         "allowedEnvVars": ["MY_TOKEN"]
       }]
