@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
 <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | default: site.description }}">
-<link rel="stylesheet" href="{{ '/assets/css/almanac.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/almanac.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <script>
 (function () {
   var stored = localStorage.getItem('almanac-theme');
@@ -38,7 +38,7 @@
   </button>
   <a class="topbar-brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
   <button id="search-toggle" class="search-toggle" type="button" aria-haspopup="dialog" aria-controls="search-dialog" aria-expanded="false">
-    <span class="search-toggle-icon" aria-hidden="true">⚲</span>
+    <svg class="icon-search" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="9" cy="9" r="6.25" fill="none" stroke="currentColor" stroke-width="2"/><line x1="18" y1="18" x2="13.6" y2="13.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     <span class="visually-hidden">Search</span>
   </button>
   <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">☾</button>
@@ -49,7 +49,7 @@
 <div class="search-overlay" id="search-overlay" data-search-index="{{ '/search.json' | relative_url }}" hidden>
   <div class="search-dialog" id="search-dialog" role="dialog" aria-modal="true" aria-label="Search this site">
     <div class="search-field">
-      <span class="search-field-icon" aria-hidden="true">⚲</span>
+      <svg class="icon-search search-field-icon" viewBox="0 0 20 20" width="16" height="16" aria-hidden="true" focusable="false"><circle cx="9" cy="9" r="6.25" fill="none" stroke="currentColor" stroke-width="2"/><line x1="18" y1="18" x2="13.6" y2="13.6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       <input type="search" id="search-input" class="search-input" placeholder="Search modules…" autocomplete="off" aria-label="Search modules">
       <button type="button" id="search-close" class="search-close" aria-label="Close search">✕</button>
     </div>
@@ -172,7 +172,7 @@
   });
 })();
 </script>
-<script src="{{ '/assets/js/lib/lunr.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/lib/lunr.min.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+<script src="{{ '/assets/js/search.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 </body>
 </html>

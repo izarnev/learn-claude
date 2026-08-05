@@ -103,7 +103,7 @@
       var a = document.createElement('a');
       a.href = doc.url;
       a.className = 'search-result';
-      var snippet = doc.text.length > 140 ? doc.text.slice(0, 140).trim() + '…' : doc.text;
+      var snippet = doc.text.length > 100 ? doc.text.slice(0, 100).trim() + '…' : doc.text;
       var headingLine = doc.heading && doc.heading !== doc.title
         ? '<span class="search-result-heading">' + escapeHtml(doc.title) + ' › ' + escapeHtml(doc.heading) + '</span>'
         : '<span class="search-result-heading">' + escapeHtml(doc.title) + '</span>';
@@ -160,6 +160,7 @@
   function openSearch() {
     lastFocused = document.activeElement;
     overlay.hidden = false;
+    overlay.classList.add('is-open');
     document.body.classList.add('search-open');
     input.value = '';
     resultsEl.innerHTML = '';
@@ -172,6 +173,7 @@
   }
 
   function closeSearch() {
+    overlay.classList.remove('is-open');
     overlay.hidden = true;
     document.body.classList.remove('search-open');
     openBtn.setAttribute('aria-expanded', 'false');
