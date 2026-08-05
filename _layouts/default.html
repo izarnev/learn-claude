@@ -9,6 +9,8 @@
 </head>
 <body>
 
+<a class="skip-link visually-hidden" href="#main-content" rel="nofollow noreferrer">Skip to content</a>
+
 {% assign current_stage = "" %}
 {% assign current_index = 0 %}
 {% assign current_count = 0 %}
@@ -68,7 +70,7 @@
   {% endfor %}
 </nav>
 
-<main class="content">
+<main class="content" id="main-content" tabindex="-1">
   {% if current_stage != "" %}
   <div class="eyebrow">{{ current_stage }} · module {{ current_index }} of {{ current_count }}</div>
   {% endif %}
