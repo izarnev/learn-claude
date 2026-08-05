@@ -6,6 +6,12 @@
 <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
 <meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 | default: site.description }}">
 <link rel="stylesheet" href="{{ '/assets/css/almanac.css' | relative_url }}">
+<script>
+(function () {
+  var stored = localStorage.getItem('almanac-theme');
+  if (stored) document.documentElement.setAttribute('data-theme', stored);
+})();
+</script>
 </head>
 <body>
 
@@ -104,10 +110,9 @@
 (function () {
   var root = document.documentElement;
 
-  /* dark mode toggle, top right */
+  /* dark mode toggle, top right (data-theme is already applied by the
+     inline head script, before first paint, to avoid a flash) */
   var themeBtn = document.getElementById('theme-toggle');
-  var stored = localStorage.getItem('almanac-theme');
-  if (stored) root.setAttribute('data-theme', stored);
   function syncTheme() {
     var isDark = (root.getAttribute('data-theme') === 'dark') ||
       (!root.getAttribute('data-theme') && window.matchMedia('(prefers-color-scheme: dark)').matches);

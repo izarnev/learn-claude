@@ -15,12 +15,12 @@
 @media (prefers-color-scheme: dark){
   :root{
     --bg:#4A4136; --bg-panel:#56493B; --ink:#F3EAD9; --ink-soft:#C9BBA3; --rule:#6B5D4B;
-    --accent:#D79A5C; --signal:#7FB37A; --code-bg:#55483A;
+    --accent:#DDA873; --signal:#7FB37A; --code-bg:#55483A;
   }
 }
 :root[data-theme="dark"]{
   --bg:#4A4136; --bg-panel:#56493B; --ink:#F3EAD9; --ink-soft:#C9BBA3; --rule:#6B5D4B;
-  --accent:#D79A5C; --signal:#7FB37A; --code-bg:#55483A;
+  --accent:#DDA873; --signal:#7FB37A; --code-bg:#55483A;
 }
 :root[data-theme="light"]{
   --bg:#F1E7D6; --bg-panel:#E8DAC0; --ink:#2B2117; --ink-soft:#6B5A45; --rule:#D2C0A0;
