@@ -5,7 +5,7 @@ order: 6
 
 # Web search and Research
 
-> **You are here** · All paths · Free plan has limited search; Research needs Pro · 40–50 min · Assumes [Prompting fundamentals](02-prompting-fundamentals.md).
+> **You are here** · All paths · Free plan has limited search; Research needs Pro · Read 10 min · Exercises 40 min · Assumes [Prompting fundamentals](02-prompting-fundamentals.md).
 
 **What you'll learn:** when to use plain search vs. Research mode, and how to get output you can actually trust.
 

@@ -5,7 +5,7 @@ order: 5
 
 # Artifacts and file creation
 
-> **You are here** · All paths · File creation requires Pro or above · 40–50 min · Assumes [Your first real conversation](01-your-first-conversation.md).
+> **You are here** · All paths · File creation requires Pro or above · Read 5 min · Exercises 50 min · Assumes [Your first real conversation](01-your-first-conversation.md).
 
 **What you'll learn:** the difference between an artifact and a real file, when each appears, and how to get Claude to produce genuinely useful deliverables.
 

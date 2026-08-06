@@ -5,7 +5,7 @@ order: 2
 
 # Prompting fundamentals
 
-> **You are here** · All paths · Free plan · 60–75 min · Assumes [Your first real conversation](01-your-first-conversation.md). The most important module in stage 01.
+> **You are here** · All paths · Free plan · Read 15 min · Exercises 40 min · Assumes [Your first real conversation](01-your-first-conversation.md). The most important module in stage 01.
 
 **What you'll learn:** the six techniques that account for most of the quality difference between good and bad prompts — straight from Anthropic's own prompt engineering guidance.
 

@@ -5,7 +5,7 @@ order: 0
 
 # API pricing and rate limits
 
-> **You are here** · Paths C and D · Needs a [Claude Console](https://platform.claude.com) account (no credits yet) · 40–60 min · Assumes you've read [What Claude actually is](../00-start-here/01-what-claude-is.md) and know what a token is.
+> **You are here** · Paths C and D · Needs a [Claude Console](https://platform.claude.com) account (no credits yet) · Read 5 min · Exercises 20 min · Assumes you've read [What Claude actually is](../00-start-here/01-what-claude-is.md) and know what a token is.
 >
 > **Not on Path A or B?** Skip this. Nothing in stages 00–03 needs it. If you only use claude.ai, the desktop app, Cowork, or Claude Code on a subscription, your costs are covered by [Plans and pricing](../00-start-here/03-plans-and-pricing.md) and none of the below applies to you.
 

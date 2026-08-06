@@ -5,7 +5,7 @@ order: 8
 
 # Structured prompting with XML
 
-> **You are here** · Paths A (optional), B, C, D · Free plan · 45–60 min · Assumes [Prompting fundamentals](02-prompting-fundamentals.md). **Non-technical readers:** this one looks like code but isn't — it's just labelled sections. Worth doing.
+> **You are here** · Paths A (optional), B, C, D · Free plan · Read 15 min · Exercises 35 min · Assumes [Prompting fundamentals](02-prompting-fundamentals.md). **Non-technical readers:** this one looks like code but isn't — it's just labelled sections. Worth doing.
 
 **What you'll learn:** how to build reliable, reusable prompt templates using XML structure — the bridge between casual chat and production prompting.
 

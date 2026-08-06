@@ -5,7 +5,7 @@ order: 5
 
 # Claude inside your apps
 
-> **You are here** · Paths A, B, C · Availability varies by plan and app · 30–40 min · Assumes [The Claude landscape](../00-start-here/02-the-claude-landscape.md).
+> **You are here** · Paths A, B, C · Availability varies by plan and app · Read 5 min · Exercises 35 min · Assumes [The Claude landscape](../00-start-here/02-the-claude-landscape.md).
 
 **What you'll learn:** every place Claude shows up outside claude.ai, and which one to reach for.
 

@@ -5,7 +5,7 @@ order: 2
 
 # The Claude landscape
 
-> **You are here** · All paths · Free plan for the exercises · 30–40 min · Assumes [What Claude actually is](01-what-claude-is.md).
+> **You are here** · All paths · Free plan for the exercises · Read 10 min · Exercises 15 min · Assumes [What Claude actually is](01-what-claude-is.md).
 
 **What you'll learn:** every place Claude exists, what each one is for, and how they relate — so you always know which door to walk through.
 

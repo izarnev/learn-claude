@@ -93,6 +93,62 @@ for path in sorted(glob.glob("0[012]-*/*.md")):
             fail(f"{path}: missing '{section}' section")
 
 
+# --- 4b. 'You are here' time estimates use the Read/Exercises split ----------
+# Every module that states a time budget must split it into reading time and
+# exercise time — a single "45-60 min" blob doesn't tell a reader what buys
+# them the ideas versus what buys them the hands-on practice.
+module_minutes = {}  # path -> (read_min, exercise_min or None)
+for path in files:
+    m = re.search(r"^> \*\*You are here\*\*.*$", open(path).read(), re.M)
+    if not m:
+        continue
+    line = m.group(0)
+    read_m = re.search(r"Read (\d+) min", line)
+    ex_m = re.search(r"Exercises (\d+) min", line)
+    if not read_m:
+        fail(f"{path}: 'You are here' header missing 'Read N min' "
+             f"(still using an unsplit time range?)")
+        continue
+    if "**Exercise" in open(path).read() and not ex_m:
+        fail(f"{path}: module has exercises but header is missing 'Exercises N min'")
+    module_minutes[path] = (int(read_m.group(1)), int(ex_m.group(1)) if ex_m else 0)
+
+
+# --- 4c. README path totals stay honest about what's actually summed --------
+# Path A is fully backed by 00-start-here + 01-foundations + 02-power-user,
+# each of which carries a Read/Exercises estimate (checked above), plus
+# capstones 1 & 2. If someone edits a module's minutes without touching the
+# README, this drifts and should be caught — see issue #52.
+def stage_minutes(prefix):
+    total = 0
+    for path, (r, e) in module_minutes.items():
+        if path.startswith(prefix):
+            total += r + e
+    return total
+
+capstone_text = open("07-capstones/README.md").read() if os.path.exists("07-capstones/README.md") else ""
+capstone_hours = re.findall(r"\*\*Time:\*\* (\d+)[–-](\d+) hours", capstone_text)
+if len(capstone_hours) >= 2:
+    c1_lo, c1_hi = map(int, capstone_hours[0])
+    c2_lo, c2_hi = map(int, capstone_hours[1])
+    path_a_modules_min = (stage_minutes("00-start-here/") +
+                           stage_minutes("01-foundations/") +
+                           stage_minutes("02-power-user/"))
+    path_a_hours = path_a_modules_min / 60
+    path_a_lo = round(path_a_hours + c1_lo + c2_lo)
+    path_a_hi = round(path_a_hours + c1_hi + c2_hi)
+
+    readme = open("README.md").read()
+    stated = re.search(r'Path A.*?\((\d+)[–-](\d+) hours\)', readme)
+    if stated:
+        stated_lo, stated_hi = int(stated.group(1)), int(stated.group(2))
+        if abs(stated_lo - path_a_lo) > 1 or abs(stated_hi - path_a_hi) > 1:
+            warn(f"README.md: Path A states {stated_lo}-{stated_hi}h, "
+                 f"but 00+01+02 modules + capstones 1&2 sum to {path_a_lo}-{path_a_hi}h")
+    else:
+        warn("README.md: could not find a 'Path A ... (N-N hours)' line to verify")
+
+
 # --- 5. Stage 00 stays free of API jargon ------------------------------------
 API_JARGON = ["MTok", "429", "exponential backoff", "Workload Identity",
               "retry-after", "Batch API", "budget_tokens"]

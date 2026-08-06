@@ -5,7 +5,7 @@ order: 4
 
 # Cowork
 
-> **You are here** · Paths A, B, C · **Requires Pro or above** · 60–75 min · Assumes [Skills](02-skills.md) and [Connectors](03-connectors-and-mcp.md). This is the flagship non-developer module.
+> **You are here** · Paths A, B, C · **Requires Pro or above** · Read 15 min · Exercises 50 min · Assumes [Skills](02-skills.md) and [Connectors](03-connectors-and-mcp.md). This is the flagship non-developer module.
 
 **What you'll learn:** how to hand Claude a multi-step job and get finished work back — including the permission modes that decide how much you're in the loop.
 

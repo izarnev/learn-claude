@@ -5,7 +5,7 @@ order: 0
 
 # How to use this track
 
-> **You are here** · All paths · Free plan · 10 min · Assumes nothing. This is the first file to read.
+> **You are here** · All paths · Free plan · Read 5 min · Exercises 5 min · Assumes nothing. This is the first file to read.
 
 **What you'll learn:** how to work through this material so it actually sticks.
 
