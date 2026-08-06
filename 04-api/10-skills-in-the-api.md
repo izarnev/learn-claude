@@ -37,8 +37,8 @@ Four ship ready to use:
 response = client.beta.messages.create(
     model="claude-sonnet-5",
     max_tokens=8192,
-    betas=["skills-2025-10-02", "files-api-2025-04-14", "code-execution-2025-05-22"],
-    tools=[{"type": "code_execution_20250522", "name": "code_execution"}],
+    betas=["skills-2025-10-02", "files-api-2025-04-14"],
+    tools=[{"type": "code_execution_20260521", "name": "code_execution"}],
     container={"skills": [{"type": "anthropic", "skill_id": "xlsx"}]},
     messages=[{
         "role": "user",

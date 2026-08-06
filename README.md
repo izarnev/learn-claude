@@ -18,7 +18,7 @@ Eight stages, numbered `00` to `07`, plus a `99-reference` folder you dip into r
 2. **What you'll learn** — the outcome, in one line
 3. **If you only read one thing** — the whole module in plain language, no jargon. Enough to be useful on its own.
 4. **The rest of the module** — the actual guide, in depth
-5. **Try it** — hands-on exercises you can do immediately, several with worked answers
+5. **Try it** — hands-on exercises you can do immediately
 6. **Checkpoint** — how you know you've got it
 7. **Going deeper** — links to the official docs for the details this guide compresses
 

@@ -146,7 +146,7 @@ And the ones you'll add almost immediately:
 | Parameter | Notes |
 |---|---|
 | `system` | System prompt. A top-level string, **not** a message with `role: "system"` |
-| `temperature` | 0–1. Lower is more deterministic. Default is usually fine. |
+| `temperature` | Removed on current models (Opus 4.7+, Opus 5, Sonnet 5, Fable 5, Mythos 5) — a non-default value returns a `400`. Only Haiku 4.5 and Sonnet 4.5-and-older still accept it. Steer with prompting instead. |
 | `stop_sequences` | Strings that end generation |
 | `thinking` | `{"type": "adaptive"}` |
 | `output_config` | `{"effort": "high"}`, `{"format": {...}}` |

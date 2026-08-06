@@ -24,16 +24,29 @@ Server tools are enabled by adding them to `tools` with a `type` field. Claude u
 
 ## The server tool catalogue
 
+Not every tool with an Anthropic-defined schema is server-*executed*. Bash, text editor, and memory are Anthropic-defined (fixed schema, declared by `type`, no `input_schema`) but client-*executed* — your code runs them and returns a `tool_result`, same as any client tool.
+
+**Server-executed** — Anthropic's infrastructure runs these; you implement nothing:
+
 | Tool | What it does |
 |---|---|
 | **Web search** | Live web search with citations |
 | **Web fetch** | Retrieve a specific URL |
-| **Code execution** | Run Python in a sandbox. Also what powers Agent Skills. |
-| **Bash** | Shell commands in a sandbox |
-| **Text editor** | View and edit files in the sandbox |
-| **Computer use** | Screenshots and control of a virtual desktop |
-| **Memory** | Persistent memory across sessions |
+| **Code execution** | Run Python and bash in a sandbox; create and edit files. Also what powers Agent Skills. |
+| **Tool search** | Find the right tool from a large tool set without loading every definition |
 | **Advisor** | Consult a stronger model at key moments during a task |
+
+**Anthropic-defined, client-executed** — fixed schema like a server tool, but you write the implementation and return the result:
+
+| Tool | What it does |
+|---|---|
+| **Bash** | Shell commands — you run them |
+| **Text editor** | View and edit files — you implement the storage |
+| **Memory** | Persistent memory across sessions — you implement the backend |
+
+**Computer use** can be either, depending on how it's wired up — screenshots and control of a virtual desktop, executed wherever you run the desktop.
+
+Note the overlap: bash and file operations *also* exist as sub-tools **inside** the code execution container. That's the server-side path (code execution owns the sandbox), distinct from the standalone Bash and Text editor client tools above.
 
 Full list and configuration: [Server tools](https://platform.claude.com/docs/en/agents-and-tools/tool-use/server-tools).
 
@@ -68,13 +81,12 @@ See [Web search tool](https://platform.claude.com/docs/en/agents-and-tools/tool-
 response = client.messages.create(
     model="claude-sonnet-5",
     max_tokens=4096,
-    tools=[{"type": "code_execution_20250522", "name": "code_execution"}],
-    betas=["code-execution-2025-05-22"],
+    tools=[{"type": "code_execution_20260521", "name": "code_execution"}],
     messages=[{"role": "user", "content": "Analyse this CSV and find the outliers: ..."}],
 )
 ```
 
-Runs Python in a sandboxed container. This is the right answer for:
+No `anthropic-beta` header required on current tool versions. Runs Python and bash in a sandboxed container, and can create and edit files. This is the right answer for:
 
 - **Any arithmetic that matters** — Claude reasons about maths well and computes it imperfectly
 - Data analysis, statistics, charts
@@ -84,6 +96,8 @@ Runs Python in a sandboxed container. This is the right answer for:
 It's also the container Agent Skills run in ([Skills in the API](10-skills-in-the-api.md)).
 
 **Constraints on the API:** no network access, no runtime package installation, pre-installed packages only.
+
+**Response block types:** current tool versions return `bash_code_execution_result` and `text_editor_code_execution_*_result` blocks, not the legacy `code_execution_result`. If you're parsing responses, match against the current block types.
 
 ---
 
@@ -145,7 +159,7 @@ Server tools, client tools, and MCP tools coexist in one request. A realistic ag
 ```python
 tools = [
     {"type": "web_search_20250305", "name": "web_search"},      # server
-    {"type": "code_execution_20250522", "name": "code_execution"}, # server
+    {"type": "code_execution_20260521", "name": "code_execution"}, # server
     {"name": "query_our_database", "description": "...", "input_schema": {...}},  # client
 ]
 ```

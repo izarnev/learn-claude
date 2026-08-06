@@ -132,7 +132,7 @@ Someone extracts your system prompt.
 
 **Structured outputs** solve output-shape inconsistency completely — constrained decoding means the schema cannot be violated.
 
-For semantic consistency: `temperature=0`, few-shot examples, and explicit format instructions.
+For semantic consistency: structured outputs (`output_config.format`, `strict: true` on tools), few-shot examples, and explicit format instructions. Sampling parameters like `temperature` are removed on current models, so they're no longer part of this toolkit.
 
 See [Increase output consistency](https://platform.claude.com/docs/en/test-and-evaluate/strengthen-guardrails/increase-consistency).
 
