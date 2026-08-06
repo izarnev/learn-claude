@@ -150,7 +150,7 @@ The diff is what tells you whether your change helped. A single absolute score t
 8. Add every new failure to the eval set
 ```
 
-**One change at a time.** Changing the prompt, the model, and the temperature together tells you nothing about which mattered.
+**One change at a time.** Changing the prompt, the model, and the effort level together tells you nothing about which mattered.
 
 ---
 

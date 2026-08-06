@@ -43,8 +43,8 @@ Two rules, both with measurable effects.
 These agree with each other, which is convenient:
 
 ```
-[ system prompt      ]  stable
 [ tool definitions   ]  stable
+[ system prompt      ]  stable
 [ reference docs     ]  stable    ← cache breakpoint
 [ conversation       ]  grows
 [ current message    ]  volatile

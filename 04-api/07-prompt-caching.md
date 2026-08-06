@@ -46,8 +46,8 @@ Everything **up to and including** the marked block is cached. The user question
 Order matters, because the cache is a prefix match. Put stable content first:
 
 ```
-1. System prompt              ← stable
-2. Tool definitions           ← stable
+1. Tool definitions           ← stable
+2. System prompt              ← stable
 3. Long reference documents   ← stable
    ─── cache_control here ───
 4. Conversation history       ← grows
@@ -63,8 +63,8 @@ Get this wrong — put a timestamp or a user ID at the top of your system prompt
 You can set up to four `cache_control` markers, creating nested cache segments. Useful when different parts of your prefix change at different rates:
 
 ```
-[ system prompt ]           ← changes monthly       — breakpoint 1
-[ tool definitions ]        ← changes weekly        — breakpoint 2
+[ tool definitions ]        ← changes weekly        — breakpoint 1
+[ system prompt ]           ← changes monthly       — breakpoint 2
 [ conversation history ]    ← grows each turn       — breakpoint 3
 [ current message ]         ← changes every request
 ```

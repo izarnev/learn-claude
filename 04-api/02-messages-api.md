@@ -95,7 +95,14 @@ system=[
 
 ## Mid-conversation system messages
 
-You can change the system prompt or the tool set partway through a conversation. Useful for multi-phase agents — a research phase with search tools, then a writing phase with different instructions.
+You can change the system prompt partway through a conversation, or change the tool set. These are two distinct features:
+
+- **Mid-conversation system messages** — GA, no beta header required. Available on Fable 5, Mythos 5, Opus 4.8, and Opus 5. **Not available on Sonnet 5** — use the top-level `system` field instead.
+- **Mid-conversation tool changes** — beta, requires the `mid-conversation-tool-changes-2026-07-01` header. Available on the same four models (Fable 5, Mythos 5, Opus 4.8, Opus 5).
+
+Both are useful for multi-phase agents — a research phase with search tools, then a writing phase with different instructions — but every example in this file uses `claude-sonnet-5`, which supports neither.
+
+Placement constraint (the other thing that 400s): a system message must follow a `user` turn (or an `assistant` turn ending in a server tool result), must precede an `assistant` turn or end the array, and cannot be `messages[0]`.
 
 See [Mid-conversation system messages and tool changes](https://platform.claude.com/docs/en/build-with-claude/mid-conversation-system-messages).
 
@@ -103,13 +110,9 @@ See [Mid-conversation system messages and tool changes](https://platform.claude.
 
 ## Sampling parameters
 
-| Parameter | Range | Use |
-|---|---|---|
-| `temperature` | 0–1 | Lower = more deterministic. Use 0 for extraction and classification; leave default for writing. |
-| `top_p` | 0–1 | Nucleus sampling. **Don't set both this and temperature.** |
-| `stop_sequences` | array of strings | Generation stops when one is produced |
+`temperature`, `top_p`, and `top_k` are removed on current models. Setting a non-default value returns a `400` on Opus 4.7+, Opus 5, Sonnet 5, Fable 5, and Mythos 5 — i.e. every model this track recommends. Only Haiku 4.5 and Sonnet 4.5-and-older still accept them.
 
-Honest advice: **most people over-tune these.** A better prompt beats a temperature adjustment nearly every time. Set `temperature=0` for deterministic tasks and otherwise leave it alone.
+Steer behavior with prompting instead. For deterministic *shape* (not wording), use `output_config.format` with a JSON schema rather than reaching for the sampler. `stop_sequences` (array of strings — generation stops when one is produced) is unaffected and still works.
 
 ---
 
@@ -214,8 +217,8 @@ Build the `ask()` function above. Have a ten-turn conversation. Log `usage.input
 **Exercise 2 — System prompt effect.**
 Same question, three system prompts (none, a role, a role plus detailed rules). Compare.
 
-**Exercise 3 — Temperature ablation.**
-Run the same extraction task ten times at `temperature=0` and ten at `1.0`. Count variations. Then do the same for a creative writing task. Note that the *right* answer differs.
+**Exercise 3 — Constrain the output, don't tune the sampler.**
+Run the same extraction task 20 times unchanged. Count the variations in the output. Then add a `json_schema` via `output_config.format` and run it 20 more times. Count variations again — sampling parameters are gone on current models, so this is how you get determinism of shape instead.
 
 **Exercise 4 — Truncation handler.**
 Force `stop_reason: "max_tokens"`. Write a handler that either raises the limit and retries, or asks Claude to continue from where it stopped (via a *user* message — prefill is gone).

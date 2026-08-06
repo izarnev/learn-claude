@@ -39,7 +39,7 @@ curl https://api.anthropic.com/v1/messages \
 | `max_tokens` | Required. Output ceiling, not a target. |
 | `messages` | Required. Alternating user/assistant. First must be `user`. |
 | `system` | Top-level string or block array — **not** a message |
-| `temperature` | 0–1. Don't set alongside `top_p`. |
+| `temperature` / `top_p` / `top_k` | Removed on current models — a non-default value returns a `400` on Opus 4.7+, Opus 5, Sonnet 5, Fable 5 and Mythos 5. Only Haiku 4.5 and Sonnet 4.5-and-older still accept them. Steer with prompting, or `output_config.format` for determinism of shape. |
 | `stop_sequences` | Array of strings |
 | `thinking` | `{"type": "adaptive"}` |
 | `output_config` | `{"effort": "high"}`, `{"format": {...}}` |
@@ -178,7 +178,7 @@ Or use `client.beta.messages.tool_runner`.
 ```python
 tools = [
   {"type": "web_search_20250305",    "name": "web_search", "max_uses": 5},
-  {"type": "code_execution_20250522","name": "code_execution"},
+  {"type": "code_execution_20260521","name": "code_execution"},
 ]
 ```
 
@@ -209,7 +209,7 @@ system=[
 ]
 ```
 
-Layout: system → tools → reference docs → **breakpoint** → history → current message.
+Layout: tools → system → reference docs → **breakpoint** → history → current message.
 
 Up to four breakpoints. Verify with `usage.cache_read_input_tokens`. If it stays 0, something in your prefix changes per request.
 
@@ -244,8 +244,8 @@ f = client.beta.files.upload(
 
 ```python
 client.beta.messages.create(
-    betas=["skills-2025-10-02", "files-api-2025-04-14", "code-execution-2025-05-22"],
-    tools=[{"type": "code_execution_20250522", "name": "code_execution"}],
+    betas=["skills-2025-10-02", "files-api-2025-04-14"],
+    tools=[{"type": "code_execution_20260521", "name": "code_execution"}],
     container={"skills": [{"type": "anthropic", "skill_id": "xlsx"}]},
     ...
 )

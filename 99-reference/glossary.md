@@ -83,7 +83,7 @@ Every term used in this track, defined once.
 
 **MCP tunnel** — enterprise connectivity for MCP servers inside your network, reachable by Anthropic-hosted surfaces.
 
-**Memory tool** — a server tool giving Claude persistent memory across sessions.
+**Memory tool** — an Anthropic-defined but client-executed tool giving Claude persistent memory across sessions; you implement the storage backend.
 
 **Multishot** — see few-shot.
 
@@ -119,7 +119,7 @@ Every term used in this track, defined once.
 
 **Sandbox** — an isolated execution environment. Claude Code's sandboxed Bash tool provides filesystem and network isolation.
 
-**Server tool** — a tool Anthropic executes for you (web search, code execution, computer use, memory, advisor), as opposed to a client tool you implement.
+**Server tool** — a tool Anthropic executes for you (web search, web fetch, code execution, tool search, advisor), as opposed to a client tool you implement. Bash, text editor, and memory have Anthropic-defined schemas but are client-executed, not server tools; computer use can be either depending on setup.
 
 **Service tier** — an API setting trading latency against throughput and priority.
 
