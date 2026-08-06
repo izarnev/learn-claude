@@ -186,3 +186,11 @@ Same caveat as Path B: `03-claude-code`, `05-agents` and `06-production` have no
 **2. Keep a scratch file.** Every time a prompt works surprisingly well, paste it into a notes file. In two weeks that file is worth more than this track.
 
 **3. Assume this document is slightly out of date.** Claude ships weekly. Every module ends with links to the live docs. When something here disagrees with the docs, the docs win — and the changelogs are listed in [99-reference/official-links.md](99-reference/official-links.md).
+
+---
+
+## Build & deploy
+
+This site deploys via a GitHub Actions workflow (`.github/workflows/pages.yml`), not the legacy "build from branch" Pages pipeline. On push to `main`, the workflow builds the Jekyll site from this repo's own `Gemfile` (`actions/jekyll-build-pages`) and publishes it (`actions/deploy-pages`). The repo's **Settings → Pages → Build and deployment → Source** is set to "GitHub Actions" to match.
+
+Switching off the legacy build means plugins are no longer limited to GitHub's Pages allowlist — anything installable via the `Gemfile` is available at build time, and extra build steps (asset hashing, search-index generation, etc.) can be added to the workflow as needed.
