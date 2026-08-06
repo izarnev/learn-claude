@@ -29,6 +29,30 @@ There is very little invented content. No hallucinated model IDs, no invented en
 | Medium | 6 | Incomplete or internally contradictory |
 | Low | 3 | Editorial / consistency |
 
+## Tracking
+
+Every finding below has a ticket, labelled `accuracy-review`:
+
+| ID | Severity | Issue |
+|---|---|---|
+| C1 | Critical | [#36 — temperature/top_p return a 400 on every recommended model](https://github.com/izarnev/learn-claude/issues/36) |
+| C2 | Critical | [#37 — legacy `code_execution_20250522` and its retired beta header](https://github.com/izarnev/learn-claude/issues/37) |
+| H1 | High | [#38 — cache prefix order stated backwards in three files](https://github.com/izarnev/learn-claude/issues/38) |
+| H2 | High | [#39 — mid-conversation system messages not available on Sonnet 5](https://github.com/izarnev/learn-claude/issues/39) |
+| H3 | High | [#40 — bash / text editor / memory misclassified as server tools](https://github.com/izarnev/learn-claude/issues/40) |
+| H4 | High | [#41 — web search pinned to the oldest tool version; ZDR unmentioned](https://github.com/izarnev/learn-claude/issues/41) |
+| M1 | Medium | [#42 — self-contradiction on model-routing savings](https://github.com/izarnev/learn-claude/issues/42) |
+| M2 | Medium | [#43 — cache minimums never stated](https://github.com/izarnev/learn-claude/issues/43) |
+| M3 | Medium | [#44 — cache write cost given only as "slightly more"](https://github.com/izarnev/learn-claude/issues/44) |
+| M4 | Medium | [#45 — stop-reason coverage incomplete](https://github.com/izarnev/learn-claude/issues/45) |
+| M5 | Medium | [#46 — code execution pricing omits the free tier](https://github.com/izarnev/learn-claude/issues/46) |
+| M6 | Medium | [#47 — `output-300k-2026-03-24` support vague in one place](https://github.com/izarnev/learn-claude/issues/47) |
+| L1 | Low | [#48 — cutoff terminology inconsistent](https://github.com/izarnev/learn-claude/issues/48) |
+| L2 | Low | [#49 — "powers Agent Skills" understates a prerequisite](https://github.com/izarnev/learn-claude/issues/49) |
+| L3 | Low | [#50 — unsourced "30% of its budget left"](https://github.com/izarnev/learn-claude/issues/50) |
+
+The process recommendations at the end of this document are not ticketed here — the CI guard belongs to the existing [#11 (wire `check-consistency.py` into CI)](https://github.com/izarnev/learn-claude/issues/11).
+
 ---
 
 ## Method
