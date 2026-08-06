@@ -120,7 +120,7 @@ tasks fully, even if the end of your budget is approaching. Never artificially
 stop any task early regardless of the context remaining.
 ```
 
-Without this, a capable agent will politely give up with 30% of its budget left.
+Without this, a capable agent may wrap up prematurely as it senses the limit approaching (see [Context awareness](../04-api/02-messages-api.md#context-awareness)).
 
 ---
 
