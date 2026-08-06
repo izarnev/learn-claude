@@ -5,7 +5,7 @@ order: 3
 
 # Models, effort, and thinking
 
-> **You are here** · All paths · Free plan covers the basics; model switching needs Pro · 45–60 min · Assumes [What Claude actually is](../00-start-here/01-what-claude-is.md). **Non-technical readers:** read the summary and "Choosing a model", then stop — the rest is API syntax.
+> **You are here** · All paths · Free plan covers the basics; model switching needs Pro · Read 15 min · Exercises 30 min · Assumes [What Claude actually is](../00-start-here/01-what-claude-is.md). **Non-technical readers:** read the summary and "Choosing a model", then stop — the rest is API syntax.
 
 **What you'll learn:** which Claude model to use for what, and how the effort and thinking controls change behaviour.
 

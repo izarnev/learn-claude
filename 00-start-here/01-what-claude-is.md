@@ -5,7 +5,7 @@ order: 1
 
 # What Claude actually is
 
-> **You are here** · All paths · Free plan · 30–40 min · Assumes nothing. This is the mental model everything else builds on.
+> **You are here** · All paths · Free plan · Read 10 min · Exercises 15 min · Assumes nothing. This is the mental model everything else builds on.
 
 **What you'll learn:** a working mental model of what's happening when you talk to Claude — enough to explain its strengths and its failure modes without hand-waving.
 

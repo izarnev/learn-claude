@@ -5,7 +5,7 @@ order: 1
 
 # Projects
 
-> **You are here** · Paths A, B, C · **Requires Pro or above** · 45–60 min · Assumes stage 01.
+> **You are here** · Paths A, B, C · **Requires Pro or above** · Read 10 min · Exercises 40 min · Assumes stage 01.
 
 **What you'll learn:** how to use Projects to stop re-explaining yourself, and how project knowledge actually gets retrieved.
 

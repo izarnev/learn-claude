@@ -5,7 +5,7 @@ order: 3
 
 # Plans, pricing, and limits
 
-> **You are here** · All paths · Free plan is fine for this module · 20–30 min · Assumes nothing.
+> **You are here** · All paths · Free plan is fine for this module · Read 5 min · Exercises 20 min · Assumes nothing.
 
 **What you'll learn:** which Claude plan to buy, when, and why you sometimes run out of Claude before the month does.
 

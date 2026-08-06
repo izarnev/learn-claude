@@ -5,7 +5,7 @@ order: 2
 
 # Skills
 
-> **You are here** · Paths A, B, C · **Requires Pro or above** in practice · 60–75 min · Assumes [Projects](01-projects.md).
+> **You are here** · Paths A, B, C · **Requires Pro or above** in practice · Read 15 min · Exercises 60 min · Assumes [Projects](01-projects.md).
 >
 > Skills are listed as available on Free, but they only run with [code execution](https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude) enabled, which is paid-only. Free users can read this module but can't do the exercises.
 

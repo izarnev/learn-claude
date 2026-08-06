@@ -5,7 +5,7 @@ order: 1
 
 # Your first real conversation
 
-> **You are here** · All paths · Free plan · 45–60 min · Assumes [What Claude actually is](../00-start-here/01-what-claude-is.md).
+> **You are here** · All paths · Free plan · Read 10 min · Exercises 40 min · Assumes [What Claude actually is](../00-start-here/01-what-claude-is.md).
 
 **What you'll learn:** how to drive a Claude conversation deliberately rather than hopefully — including the interface controls most people never touch.
 

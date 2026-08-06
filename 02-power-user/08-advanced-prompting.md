@@ -5,7 +5,7 @@ order: 8
 
 # Advanced prompting patterns
 
-> **You are here** · Paths A, B, C, D · Free plan · 60–75 min · Assumes [Prompting fundamentals](../01-foundations/02-prompting-fundamentals.md) and [Structured prompting](../01-foundations/08-structured-prompting.md). The capstone of the no-code path.
+> **You are here** · Paths A, B, C, D · Free plan · Read 30 min · Exercises 40 min · Assumes [Prompting fundamentals](../01-foundations/02-prompting-fundamentals.md) and [Structured prompting](../01-foundations/08-structured-prompting.md). The capstone of the no-code path.
 
 **What you'll learn:** the patterns that separate competent prompting from expert prompting — most of which are about *structuring the work*, not phrasing the request.
 

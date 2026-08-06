@@ -5,7 +5,7 @@ order: 3
 
 # Connectors and MCP, explained without code
 
-> **You are here** · Paths A, B, C · **Requires Pro or above** · 45–60 min · Assumes stage 01. Read the security section even if you skim the rest.
+> **You are here** · Paths A, B, C · **Requires Pro or above** · Read 10 min · Exercises 35 min · Assumes stage 01. Read the security section even if you skim the rest.
 
 **What you'll learn:** what MCP actually is, how connectors work in the consumer apps, and the security model you need to understand before you connect anything.
 

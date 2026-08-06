@@ -5,7 +5,7 @@ order: 7
 
 # Plugins
 
-> **You are here** · Paths A, B, C · **Requires Pro or above** · 25–35 min · Assumes [Skills](02-skills.md) and [Connectors](03-connectors-and-mcp.md).
+> **You are here** · Paths A, B, C · **Requires Pro or above** · Read 5 min · Exercises 25 min · Assumes [Skills](02-skills.md) and [Connectors](03-connectors-and-mcp.md).
 
 **What you'll learn:** what a plugin bundles, where to find good ones, and when to build your own.
 

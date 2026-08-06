@@ -5,7 +5,7 @@ order: 6
 
 # Automation: scheduled tasks and routines
 
-> **You are here** · Paths A, B, C · **Requires Pro or above** · 45–60 min · Assumes [Cowork](04-cowork.md).
+> **You are here** · Paths A, B, C · **Requires Pro or above** · Read 10 min · Exercises 30 min · Assumes [Cowork](04-cowork.md).
 
 **What you'll learn:** how to make Claude do work on a schedule, and how to tell the difference between the several scheduling mechanisms.
 

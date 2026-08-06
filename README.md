@@ -14,7 +14,7 @@ A complete, step-by-step learning track for Claude — from "I've never typed a 
 
 Eight stages, numbered `00` to `07`, plus a `99-reference` folder you dip into rather than work through. Each file inside a stage is a **module**, and every module has the same shape:
 
-1. **You are here** — which path it's on, what plan it needs, how long it takes, what it assumes
+1. **You are here** — which path it's on, what plan it needs, how long it takes to read and how long the exercises take, what it assumes
 2. **What you'll learn** — the outcome, in one line
 3. **If you only read one thing** — the whole module in plain language, no jargon. Enough to be useful on its own.
 4. **The rest of the module** — the actual guide, in depth
@@ -45,9 +45,9 @@ learn-claude/
 
 You do not have to do all of it. Pick the path that matches where you're going.
 
-Time estimates below assume you actually do the exercises. Reading only, halve them. They are per-module ranges added up, not a promise — go at whatever pace makes it stick.
+Each module below states its own reading time and exercise time in its **You are here** line. The totals here are those per-module numbers added up for the modules and capstones in that path's recipe, not a promise — go at whatever pace makes it stick. For a reading-only pass through a path, add up just the Read figures.
 
-### Path A — "I just want to use Claude really well" (12–16 hours)
+### Path A — "I just want to use Claude really well" (21–24 hours)
 
 `00-start-here` → `01-foundations` → `02-power-user` → capstone 1 & 2
 
@@ -57,9 +57,13 @@ You'll never touch code. You'll end up better at Claude than most engineers. Spr
 
 Path A → `03-claude-code` → capstone 3
 
+`03-claude-code`'s modules don't carry per-module **You are here** estimates yet, so this delta isn't backed by a per-module sum the way Path A's total is — treat it as a rough placeholder pending that follow-up.
+
 ### Path C — "I want to build products on Claude" (40–60 hours)
 
 Path A (skim) → `03-claude-code` → `04-api` → `05-agents` → `06-production` → capstones 4 & 5
+
+Same caveat as Path B: `03-claude-code`, `05-agents` and `06-production` have no per-module estimates yet (only `04-api/00-pricing-and-rate-limits.md` does), so this total is not yet a verified sum.
 
 ### Path D — "I'm technical, skip the basics"
 

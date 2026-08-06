@@ -5,7 +5,7 @@ order: 7
 
 # Memory and personalisation
 
-> **You are here** · All paths · Free plan for settings; memory features vary by plan · 40–50 min · Assumes [What Claude actually is](../00-start-here/01-what-claude-is.md).
+> **You are here** · All paths · Free plan for settings; memory features vary by plan · Read 10 min · Exercises 30 min · Assumes [What Claude actually is](../00-start-here/01-what-claude-is.md).
 
 **What you'll learn:** how Claude carries context across conversations, how to control it, and how to make Claude sound like you rather than like a press release.
 
