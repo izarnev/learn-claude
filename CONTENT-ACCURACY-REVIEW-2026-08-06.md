@@ -1,12 +1,16 @@
 ---
-title: "Content accuracy review"
+title: "Content accuracy review — 6 August 2026"
+date: 2026-08-06
 ---
 
 # Content accuracy review — learn-claude
 
-*Review date: 5 August 2026. Verified against platform.claude.com, code.claude.com, and the Anthropic model/migration documentation live on that date.*
+**Review date: 6 August 2026.**
+Verified against platform.claude.com, code.claude.com, and the Anthropic model and migration documentation as published on that date.
 
-Scope: all 63 Markdown files (~13,750 lines).
+Scope: all 63 Markdown files (~13,750 lines), at commit `2e6e3ae`.
+
+> This is a point-in-time snapshot. Anthropic ships model and tool changes frequently, and several findings below exist precisely because the docs moved after this content was written. Re-run the review rather than trusting these results after a model or tool release.
 
 ---
 
