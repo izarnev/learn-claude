@@ -13,15 +13,36 @@ import os
 import re
 import sys
 import glob
+from datetime import date
 
 # --- Single source of truth. Update here when prices change. ------------------
-PRICES = {          # model            (input $/MTok, output $/MTok)
-    "Fable 5":      (10, 50),
-    "Opus 5":       (5, 25),
-    "Sonnet 5":     (3, 15),
+# NOTE: this checks that the track agrees with *this table*, not that the table
+# agrees with Anthropic's live pricing. Re-verify it by hand against
+# https://platform.claude.com/docs/en/about-claude/pricing and bump the date
+# below; a stale date produces a warning (see section 7).
+PRICES_LAST_VERIFIED = "2026-10-02"
+PRICES_STALE_AFTER_DAYS = 31
+
+CURRENT = {         # model            (input $/MTok, output $/MTok)
+    "Fable 5.1":    (10, 50),
+    "Opus 5.5":     (4, 20),
+    "Sonnet 5.5":   (2, 10),
     "Haiku 4.5":    (1, 5),
 }
+LEGACY = {          # still available, no longer the lineup the track leads with
+    "Fable 5":      (10, 50),
+    "Opus 5":       (5, 25),
+    "Sonnet 5":     (2, 10),   # $2/$10 is now standard, not introductory
+}
+PRICES = {**LEGACY, **CURRENT}
 CHEAPEST = "Haiku 4.5"
+
+
+def model_pattern(model):
+    """'Claude <model>' not followed by more version digits, so that
+    'Claude Opus 5' doesn't match inside 'Claude Opus 5.5'."""
+    return re.compile(rf"Claude {re.escape(model)}(?!\.?\d)")
+
 
 failures = []
 warnings = []
@@ -41,27 +62,37 @@ if not files:
 
 
 # --- 1. Price ratio claims ----------------------------------------------------
-# Any "N× cheaper than X" must match the table.
+# Any "N× cheaper than <family>" must match a model in that family. A claim that
+# matches only a legacy model is a warning (the track should lead with current
+# models); one that matches nothing is a failure.
 base_in = PRICES[CHEAPEST][0]
-valid_ratios = {m: p[0] / base_in for m, p in PRICES.items()}
+
+
+def ratios_for(family, table):
+    return {p[0] / base_in for m, p in table.items() if m.split()[0].lower() == family.lower()}
+
 
 for path in files:
     text = open(path).read()
     for m in re.finditer(r"(\d+)×\s*cheaper than (\w+)", text):
-        claimed, model = int(m.group(1)), m.group(2)
-        match = next((k for k in PRICES if k.split()[0].lower() == model.lower()), None)
-        if match is None:
+        claimed, family = int(m.group(1)), m.group(2)
+        current, everything = ratios_for(family, CURRENT), ratios_for(family, PRICES)
+        if not everything:
             continue
-        actual = valid_ratios[match]
-        if abs(claimed - actual) > 0.01:
-            fail(f"{path}: claims '{m.group(0)}' but table says {actual:.0f}×")
+        if any(abs(claimed - r) <= 0.01 for r in current):
+            continue
+        if any(abs(claimed - r) <= 0.01 for r in everything):
+            warn(f"{path}: '{m.group(0)}' matches only a legacy {family} model")
+        else:
+            shown = "/".join(f"{r:g}×" for r in sorted(current))
+            fail(f"{path}: claims '{m.group(0)}' but table says {shown}")
 
 
 # --- 2. Price tables agree with each other -----------------------------------
 for path in files:
     for line in open(path):
         for model, (inp, out) in PRICES.items():
-            if f"Claude {model}" in line and "$" in line:
+            if model_pattern(model).search(line) and "$" in line:
                 found = re.findall(r"\$(\d+)", line)
                 if len(found) >= 2 and (int(found[0]), int(found[1])) != (inp, out):
                     # Intro/promotional pricing is called out explicitly; allow it.
@@ -73,7 +104,8 @@ for path in files:
 # --- 3. Internal links resolve ------------------------------------------------
 for path in files:
     d = os.path.dirname(path)
-    for m in re.finditer(r"\[[^\]]*\]\((?!https?:|#|mailto:|vscode:|cursor:)([^)#]+)", open(path).read()):
+    # {{ ... }} / {% ... %} targets are Liquid, resolved at build time (e.g. 404.md).
+    for m in re.finditer(r"\[[^\]]*\]\((?!https?:|#|mailto:|vscode:|cursor:|\{)([^)#]+)", open(path).read()):
         target = os.path.normpath(os.path.join(d, m.group(1)))
         if not os.path.exists(target):
             fail(f"{path}: broken link -> {m.group(1)}")
@@ -168,6 +200,36 @@ for m in re.finditer(r"\]\((\d\d[^)]+\.md)\)", readme):
 for path in sorted(glob.glob("0[0-7]-*/*.md")):
     if os.path.basename(path) != "README.md" and path not in readme:
         warn(f"{path}: exists but isn't in the README index")
+
+
+# --- 7. Freshness -------------------------------------------------------------
+# The price table above is only as good as its last manual verification.
+today = date.today()
+age = (today - date.fromisoformat(PRICES_LAST_VERIFIED)).days
+if age > PRICES_STALE_AFTER_DAYS:
+    warn(f"PRICES last verified {PRICES_LAST_VERIFIED} ({age} days ago) — "
+         f"re-check against the live pricing page and bump PRICES_LAST_VERIFIED")
+
+# Modules carry `last_verified: YYYY-MM-DD` in their front matter. Missing is a
+# single aggregated warning (so the rollout isn't noise); malformed is a failure.
+MODULE_STALE_AFTER_DAYS = 60
+unstamped = 0
+modules = [p for p in files if re.match(r"(0[0-7]-|99-reference/)", p) and os.path.basename(p) != "README.md"]
+for path in modules:
+    fm = re.match(r"---\n(.*?)\n---", open(path).read(), re.S)
+    m = re.search(r"^last_verified:\s*(\S+)\s*$", fm.group(1), re.M) if fm else None
+    if not m:
+        unstamped += 1
+        continue
+    try:
+        age = (today - date.fromisoformat(m.group(1))).days
+    except ValueError:
+        fail(f"{path}: last_verified '{m.group(1)}' is not YYYY-MM-DD")
+        continue
+    if age > MODULE_STALE_AFTER_DAYS:
+        warn(f"{path}: last verified {m.group(1)} ({age} days ago)")
+if unstamped:
+    warn(f"{unstamped} of {len(modules)} modules have no `last_verified:` front matter")
 
 
 # --- Report -------------------------------------------------------------------
